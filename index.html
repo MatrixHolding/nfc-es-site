@@ -369,7 +369,7 @@ footer nav a{display:inline-flex;align-items:center;min-height:44px}
         <div class="thumbs" role="group" aria-label="Imágenes de ejemplo">
           <button type="button" class="thumb" data-img="trazo" aria-pressed="true" aria-label="Trazo de pincel"><img src="assets/img/eink-trazo.webp" width="330" height="600" alt="" loading="lazy"></button>
           <button type="button" class="thumb" data-img="flores" aria-pressed="false" aria-label="Flores"><img src="assets/img/eink-flores.webp" width="330" height="600" alt="" loading="lazy"></button>
-          <button type="button" class="thumb" data-img="retrato" aria-pressed="false" aria-label="Retrato"><img src="assets/img/eink-retrato.webp" width="330" height="600" alt="" loading="lazy"></button>
+          <button type="button" class="thumb" data-img="anime" aria-pressed="false" aria-label="Ilustración de una chica"><img src="assets/img/eink-anime.webp" width="330" height="600" alt="" loading="lazy"></button>
           <button type="button" class="thumb" data-img="libertad" aria-pressed="false" aria-label="Estatua de la Libertad"><img src="assets/img/eink-libertad.webp" width="330" height="600" alt="" loading="lazy"></button>
         </div>
         <button type="button" class="thumb" data-demo-next style="width:auto;height:44px;padding:0 14px;font-weight:600;font-size:.9rem;background:var(--surface);border-color:var(--line)">Otra imagen</button>
@@ -683,7 +683,7 @@ footer nav a{display:inline-flex;align-items:center;min-height:44px}
 
   /* ── Démo e-ink (signature) */
   var stage = $('#esStage'), screenImg = $('[data-demo-screen]'), thumbs = $$('.thumb[data-img]'), order = thumbs.map(function (t) { return t.getAttribute('data-img'); });
-  var ALT = { trazo: 'un trazo de pincel negro, rojo y amarillo', flores: 'un ramo de flores rojas', retrato: 'el retrato de una mujer', libertad: 'la Estatua de la Libertad', anime: 'una ilustración' };
+  var ALT = { trazo: 'un trazo de pincel negro, rojo y amarillo', flores: 'un ramo de flores rojas', retrato: 'el retrato de una mujer', libertad: 'la Estatua de la Libertad', anime: 'la ilustración de una chica' };
   var cur = 0, busy = false, timer = null, visible = false;
   function show(i) {
     if (busy) return; i = (i + order.length) % order.length; if (i === cur && !stage.classList.contains('refresh')) { if (i === cur) return; }
