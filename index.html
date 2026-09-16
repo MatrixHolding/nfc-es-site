@@ -83,7 +83,7 @@ p{margin:0}
 
 /* ── HERO + DÉMO (signature) */
 .hero{padding:20px 0 56px}
-.hero-grid{display:grid;gap:18px;align-items:center;grid-template-areas:'head' 'demo' 'body'}
+.hero-grid{display:grid;gap:18px;align-items:center;grid-template-columns:minmax(0,1fr);grid-template-areas:'head' 'demo' 'body'}
 .hero-head{grid-area:head}.hero-body{grid-area:body}#esDemo{grid-area:demo}
 .hero h1{font-size:clamp(1.9rem,7.8vw,3.9rem);max-width:15ch}
 .hero .lead{max-width:44ch}
@@ -133,6 +133,21 @@ p{margin:0}
 .sw[aria-pressed="true"]{box-shadow:0 0 0 2px var(--ink)}
 .sw-negro{background:var(--case-negro)}.sw-gris{background:var(--case-gris)}.sw-rosa{background:var(--case-rosa)}.sw-naranja{background:var(--case-naranja)}
 
+@media (max-width:374px){
+  .demo{gap:12px}
+  .stage{width:150px;height:298px}
+  .case{border-radius:32px}
+  .cam{width:64px;height:64px;left:11px;top:11px;border-radius:17px}
+  .cam i{width:23px;height:23px}
+  .cam i:nth-child(1){left:6px;top:6px}.cam i:nth-child(2){left:6px;top:35px}.cam i:nth-child(3){left:35px;top:20px}
+  .nfc{width:24px;height:24px;font-size:7px;line-height:24px;right:12px;top:14px}
+  .screen{left:34px;right:34px;top:100px;bottom:26px}
+  .bar{left:34px;right:34px;bottom:12px}
+  .phone{width:130px;margin-left:-65px}
+  .thumbs{grid-template-columns:repeat(2,50px)}
+  .thumb{width:50px;height:64px}
+  .picker p{font-size:.8rem}
+}
 /* ── CÓMO FUNCIONA */
 .como{background:var(--surface)}
 .como-grid{display:grid;gap:34px;align-items:center}
