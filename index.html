@@ -20,622 +20,349 @@ var a=new Uint8Array(8),r='';(window.crypto&&crypto.getRandomValues)?crypto.getR
 cid='es_'+Date.now().toString(36)+r.replace(/[^a-z0-9]/g,'');window.__esClick=cid;window.__esEid='lpv_'+cid;window.__esAttr=S;
 window.__esBeacon(false)}catch(e){}})();
 </script>
-<title>NFC Case · La funda con pantalla de tinta electrónica · Pagas al recibir</title>
-<meta name="description" content="Funda para iPhone con pantalla de tinta electrónica: eliges la imagen en tu iPhone y la funda la muestra, sin batería. 69 € IVA incluido, envío gratis, pagas al recibir.">
+<title>Funda NFC con pantalla de tinta electrónica · Pago a la entrega · Envío gratis</title>
+<meta name="description" content="Funda para iPhone con pantalla de tinta electrónica: eliges la imagen en tu iPhone y la funda la muestra, sin batería. 69 € IVA incluido, envío gratis y pago a la entrega.">
 <meta name="robots" content="noindex,nofollow">
-<meta name="theme-color" content="#ECEDEA">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='7' y='2' width='18' height='28' rx='5' fill='%23151514'/%3E%3Crect x='11' y='12' width='10' height='14' rx='1.5' fill='%23ECEDEA'/%3E%3Crect x='19' y='5' width='4' height='4' rx='1' fill='%23B8431C'/%3E%3C/svg%3E">
+<meta name="theme-color" content="#ffffff">
+<meta name="format-detection" content="telephone=no">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='7' y='2' width='18' height='28' rx='5' fill='%23111'/%3E%3Crect x='11' y='12' width='10' height='14' rx='1.5' fill='%23fff'/%3E%3C/svg%3E">
+<link rel="preload" as="image" href="assets/img/p-negro-600.webp" imagesrcset="assets/img/p-negro-600.webp 600w, assets/img/p-negro-1000.webp 1000w" imagesizes="(min-width:900px) 520px, 100vw" fetchpriority="high">
 <!--
-  LP NFC Case · Espagne · COD « Reserva sin pago »
-  VARIANCE 6 / MOTION 5 / DENSITY 5
-  SIGNATURE: live DOM e-ink case — la coque est construite en HTML/CSS ; au tap sur une image (ou toutes les 4,5 s à l'écran),
-             l'iPhone s'approche, la tinta electrónica fait son rafraîchissement noir/blanc et affiche l'écran RÉEL découpé des photos produit.
-  Contrat DOM : docs/DOM_CONTRACT.md · Serveur : nfc-es-order / nfc-es-pageview (projet strocqxfyfohwbdntmsu)
+  LP NFC Case · Espagne · COD — v2 (16/09, owner : « trop de détails, photos produit, choix simplifié, mobile, pas l'air IA,
+  pago a la entrega + envío gratis »). Fiche produit classique : galerie de VRAIES photos, prix, 3 garanties, 3 étapes, FAQ, formulaire.
+  Police système (SF Pro sur iPhone : 100 % du trafic ciblé iOS), aucun webfont. Contrat DOM : docs/DOM_CONTRACT.md.
 -->
-
-<link rel="preload" href="assets/fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="assets/fonts/geist.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" as="image" href="assets/img/eink-trazo.webp" fetchpriority="high">
 <style>
-@font-face{font-family:'Bricolage Grotesque';src:url(assets/fonts/bricolage-grotesque.woff2) format('woff2');font-weight:200 800;font-display:swap}
-@font-face{font-family:'Geist';src:url(assets/fonts/geist.woff2) format('woff2');font-weight:100 900;font-display:swap}
-:root{
-  --paper:#ECEDEA; --surface:#F6F7F4; --ink:#151514; --ink-2:#545650; --muted:#6B6D67; --line:#D3D5CF;
-  --accent:#B8431C; --accent-ink:#A33A16; --ok:#2F6B45; --err:#9B2C22; --err-soft:#F6E4E1;
-  --case-negro:#1D1D1F; --case-gris:#8C8F92; --case-rosa:#E6C3BE; --case-naranja:#E2692C;
-  --case:var(--case-negro);
-  --display:'Bricolage Grotesque', 'Geist', ui-sans-serif, sans-serif;
-  --body:'Geist', ui-sans-serif, -apple-system, sans-serif;
-  --r:14px; --ease:cubic-bezier(.25,1,.5,1);
-  --wrap:min(1080px, 100% - 40px);
-}
-*{box-sizing:border-box}
+:root{--ink:#111;--mute:#5f5f5f;--line:#e6e6e6;--soft:#f5f5f5;--ok:#15803d;--okbg:#effaf2;--err:#b42318;--r:12px;
+  --font:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Helvetica,Arial,sans-serif}
+*,*::before,*::after{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation-duration:.01ms!important;transition-duration:.01ms!important}}
-body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.55 var(--body);-webkit-font-smoothing:antialiased;padding-bottom:env(safe-area-inset-bottom)}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:#fff;color:var(--ink);font:16px/1.5 var(--font);-webkit-font-smoothing:antialiased;overflow-x:hidden}
 img{display:block;max-width:100%;height:auto}
 a{color:inherit}
-button,input,select,textarea{font:inherit;color:inherit}
-:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:6px}
-.wrap{width:var(--wrap);margin-inline:auto}
-h1,h2,h3{font-family:var(--display);font-weight:600;letter-spacing:-.02em;line-height:1.05;margin:0}
-h2{font-size:clamp(1.9rem,6.4vw,3rem)}
-h3{font-size:1.22rem;letter-spacing:-.01em;line-height:1.2}
-p{margin:0}
-.lead{color:var(--ink-2);font-size:1.06rem}
-.sec{padding:64px 0}
-.hair{border:0;border-top:1px solid var(--line);margin:0}
+button,input,select{font:inherit;color:inherit}
+.wrap{width:100%;max-width:1080px;margin:0 auto;padding:0 16px}
+.bar{background:var(--ink);color:#fff;text-align:center;font-size:13px;font-weight:600;padding:8px 12px;letter-spacing:.01em}
+.bar span{white-space:nowrap}
+header.top{border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:52px}
+.logo{font-weight:800;font-size:18px;letter-spacing:-.02em;text-decoration:none}
+.top a.go{font-size:14px;font-weight:600;text-decoration:none;padding:8px 0}
 
-/* ── Barre du haut */
-.top{display:flex;justify-content:space-between;align-items:center;padding:14px 0 0}
-.mark{font:600 1.05rem/1 var(--display);letter-spacing:-.01em;display:flex;align-items:center;gap:8px}
-.mark i{width:12px;height:18px;border-radius:3px;background:var(--ink);position:relative;display:inline-block}
-.mark i:after{content:"";position:absolute;inset:6px 3px 3px;background:var(--paper);border-radius:1px}
-.top small{font-size:.86rem;color:var(--ink-2)}
+/* Produit */
+.product{display:grid;gap:18px;padding-top:12px;padding-bottom:28px}
+.gal{position:relative;margin:0 -16px}
+.slides{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.slides::-webkit-scrollbar{display:none}
+.slides figure{flex:0 0 100%;margin:0;scroll-snap-align:center;aspect-ratio:1/1;background:#fff}
+.slides img{width:100%;height:100%;object-fit:contain}
+.dots{display:flex;justify-content:center;gap:6px;margin-top:8px}
+.dots i{width:6px;height:6px;border-radius:50%;background:#cfcfcf;transition:background .2s}
+.dots i.on{background:var(--ink)}
+.thumbs{display:none}
+.info h1{font-size:23px;line-height:1.25;letter-spacing:-.015em;margin:0 0 6px;font-weight:700}
+.info .sub{margin:0;color:var(--mute);font-size:15px}
+.price{display:flex;align-items:baseline;gap:10px;margin:14px 0 4px}
+.price b{font-size:28px;letter-spacing:-.02em}
+.price small{color:var(--mute);font-size:13px}
+.perks{list-style:none;margin:14px 0 0;padding:0;border:1px solid var(--line);border-radius:var(--r)}
+.perks li{display:flex;gap:12px;align-items:center;padding:11px 14px;font-size:15px}
+.perks li+li{border-top:1px solid var(--line)}
+.perks svg{flex:0 0 22px;width:22px;height:22px;color:var(--ok)}
+.perks b{display:block;font-weight:650}
+.perks span{display:block;color:var(--mute);font-size:13px;line-height:1.35}
+.note{display:flex;gap:8px;align-items:center;margin:12px 0 0;font-size:14px;color:var(--ink)}
+.note svg{flex:0 0 18px;width:18px;height:18px;color:var(--mute)}
+.btn{display:flex;align-items:center;justify-content:center;width:100%;min-height:54px;border:0;border-radius:var(--r);background:var(--ink);color:#fff;font-size:17px;font-weight:700;text-decoration:none;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.btn:active{transform:scale(.99)}
+.btn[aria-busy=true]{opacity:.7}
+.info .btn{margin-top:16px}
+.under{text-align:center;color:var(--mute);font-size:13px;margin:8px 0 0}
 
-/* ── PROBLEMA */
-.problema{padding:22px 0 14px}
-.problema h2{font-size:clamp(1.5rem,6.2vw,2.7rem);max-width:17ch}
-.pains{list-style:none;padding:0;margin:14px 0 0;display:grid;gap:0}
-.pains li{padding:8px 0;border-top:1px solid var(--line);color:var(--ink-2);font-size:.94rem;line-height:1.4;display:grid;grid-template-columns:22px 1fr;gap:8px}
-.pains li:last-child{border-bottom:1px solid var(--line)}
-.pains svg{width:16px;height:16px;margin-top:4px;color:var(--accent)}
+/* Sections */
+.sec{padding:28px 0;border-top:8px solid var(--soft)}
+.sec h2{font-size:21px;line-height:1.25;letter-spacing:-.01em;margin:0 0 14px;font-weight:700}
+.how{display:grid;gap:16px}
+.how img{border-radius:var(--r);background:#fff;border:1px solid var(--line);width:100%;max-width:300px;margin:0 auto}
+.steps{list-style:none;margin:0;padding:0;counter-reset:s;display:grid;gap:12px}
+.steps li{counter-increment:s;display:grid;grid-template-columns:30px 1fr;gap:12px;align-items:start;font-size:15px}
+.steps li::before{content:counter(s);width:30px;height:30px;border-radius:50%;background:var(--ink);color:#fff;font-weight:700;font-size:14px;display:grid;place-items:center}
+.steps b{display:block}
+.steps span{color:var(--mute)}
+.fine{color:var(--mute);font-size:13px;margin:14px 0 0}
+details{border-bottom:1px solid var(--line)}
+details:first-of-type{border-top:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;min-height:52px;padding:10px 0;font-weight:600;font-size:15px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"";flex:0 0 10px;width:10px;height:10px;border-right:2px solid var(--ink);border-bottom:2px solid var(--ink);transform:rotate(45deg) translateY(-3px);transition:transform .2s}
+details[open] summary::after{transform:rotate(225deg) translateY(-2px)}
+details p{margin:0 0 14px;color:#333;font-size:15px}
 
-/* ── HERO + DÉMO (signature) */
-.hero{padding:20px 0 56px}
-.hero-grid{display:grid;gap:18px;align-items:center;grid-template-columns:minmax(0,1fr);grid-template-areas:'head' 'demo' 'body'}
-.hero-head{grid-area:head}.hero-body{grid-area:body}#esDemo{grid-area:demo}
-.hero h1{font-size:clamp(1.9rem,7.8vw,3.9rem);max-width:15ch}
-.hero .lead{max-width:44ch}
-.price-row:first-child{margin-top:0}
-.price-row{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-top:22px}
-.price{font:600 3rem/1 var(--display);letter-spacing:-.03em}
-.price-meta{font-size:.93rem;color:var(--ink-2);line-height:1.4}
-.note{margin-top:14px;display:inline-flex;align-items:center;gap:10px;padding:9px 13px;border-radius:999px;background:var(--surface);border:1px solid var(--line);font-size:.92rem;font-weight:500}
-.note b{width:8px;height:8px;border-radius:50%;background:var(--accent);flex:none}
-.cta{display:flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 26px;border-radius:14px;border:0;background:var(--accent);color:#fff;font:600 1.07rem/1 var(--body);text-decoration:none;cursor:pointer;transition:background-color .18s var(--ease),transform .12s var(--ease)}
-.cta:hover{background:var(--accent-ink)}
-.cta:active{transform:translateY(1px)}
-.cta[disabled]{background:#A7A9A3;cursor:not-allowed}
-.hero .cta{margin-top:20px;width:100%;max-width:420px}
-.micro{margin-top:10px;font-size:.88rem;color:var(--ink-2)}
-
-.demo{position:relative;display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:center;justify-content:center}
-.stage{position:relative;width:196px;height:388px;margin-inline:auto}
-.case{position:absolute;inset:0;border-radius:40px;background:var(--case);box-shadow:inset 0 0 0 1px rgba(255,255,255,.08),inset 0 -10px 24px rgba(0,0,0,.18),0 26px 40px -22px rgba(21,21,20,.55);transition:background-color .35s var(--ease)}
-.cam{position:absolute;left:14px;top:14px;width:84px;height:84px;border-radius:22px;background:rgba(0,0,0,.26);box-shadow:inset 0 0 0 1px rgba(255,255,255,.1)}
-.cam i{position:absolute;width:30px;height:30px;border-radius:50%;background:radial-gradient(circle at 40% 38%,#5a6170 0 18%,#101114 20% 58%,#2a2c31 60% 100%);box-shadow:0 0 0 2px rgba(255,255,255,.18)}
-.cam i:nth-child(1){left:8px;top:8px}.cam i:nth-child(2){left:8px;top:46px}.cam i:nth-child(3){left:46px;top:27px}
-.nfc{position:absolute;right:16px;top:18px;width:30px;height:30px;border-radius:7px;background:linear-gradient(135deg,#1c4fb8,#3a7be0);color:#fff;font:700 9px/30px var(--body);text-align:center;letter-spacing:.02em;box-shadow:inset 0 0 0 1px rgba(255,255,255,.25)}
-.screen{position:absolute;left:44px;right:44px;top:132px;bottom:34px;border-radius:6px;overflow:hidden;background:#dcdcd6;box-shadow:inset 0 0 0 3px rgba(0,0,0,.35)}
-.screen img{width:100%;height:100%;object-fit:cover}
-.flash{position:absolute;inset:0;opacity:0;pointer-events:none}
-.flash.k{background:#151514}.flash.w{background:#ecece6}
-.stage.refresh .flash.k{animation:ink-k .9s var(--ease) both}
-.stage.refresh .flash.w{animation:ink-w .9s var(--ease) both}
-@keyframes ink-k{0%{opacity:0}18%{opacity:1}34%{opacity:0}52%{opacity:.85}64%{opacity:0}100%{opacity:0}}
-@keyframes ink-w{0%{opacity:0}34%{opacity:1}50%{opacity:0}64%{opacity:.9}82%{opacity:0}100%{opacity:0}}
-.phone{position:absolute;left:50%;top:-40px;width:170px;height:92px;margin-left:-85px;border-radius:26px 26px 0 0;border:3px solid var(--ink);border-bottom:0;background:linear-gradient(var(--paper),rgba(236,237,234,.0));transform:translateY(-70px);opacity:0;transition:transform .45s var(--ease),opacity .3s var(--ease);pointer-events:none}
-.phone:before{content:"";position:absolute;left:50%;top:10px;width:52px;height:12px;margin-left:-26px;border-radius:8px;background:var(--ink)}
-.stage.near .phone{transform:translateY(22px);opacity:1}
-.bar{position:absolute;left:44px;right:44px;bottom:16px;height:4px;border-radius:4px;background:rgba(255,255,255,.18);overflow:hidden}
-.bar i{position:absolute;inset:0;background:#fff;transform:scaleX(0);transform-origin:left}
-.stage.near .bar i{transition:transform .8s linear;transform:scaleX(1)}
-.picker{display:grid;gap:10px;align-content:center}
-.picker p{font-size:.86rem;color:var(--ink-2);max-width:18ch}
-.thumbs{display:grid;grid-template-columns:repeat(2,58px);gap:8px}
-.thumb{width:58px;height:74px;padding:0;border-radius:9px;border:2px solid transparent;background:var(--surface);overflow:hidden;cursor:pointer;transition:border-color .18s var(--ease)}
-.thumb img{width:100%;height:100%;object-fit:cover}
-.thumb[aria-pressed="true"]{border-color:var(--ink)}
-.demo-note{grid-column:1/-1;text-align:center;font-size:.82rem;color:var(--ink-2)}
-.swatches{display:flex;gap:10px;flex-wrap:wrap}
-.sw{width:44px;height:44px;border-radius:50%;border:2px solid var(--paper);box-shadow:0 0 0 1px var(--line);cursor:pointer;padding:0;transition:box-shadow .18s var(--ease)}
-.sw[aria-pressed="true"]{box-shadow:0 0 0 2px var(--ink)}
-.sw-negro{background:var(--case-negro)}.sw-gris{background:var(--case-gris)}.sw-rosa{background:var(--case-rosa)}.sw-naranja{background:var(--case-naranja)}
-
-@media (max-width:374px){
-  .demo{gap:12px}
-  .stage{width:150px;height:298px}
-  .case{border-radius:32px}
-  .cam{width:64px;height:64px;left:11px;top:11px;border-radius:17px}
-  .cam i{width:23px;height:23px}
-  .cam i:nth-child(1){left:6px;top:6px}.cam i:nth-child(2){left:6px;top:35px}.cam i:nth-child(3){left:35px;top:20px}
-  .nfc{width:24px;height:24px;font-size:7px;line-height:24px;right:12px;top:14px}
-  .screen{left:34px;right:34px;top:100px;bottom:26px}
-  .bar{left:34px;right:34px;bottom:12px}
-  .phone{width:130px;margin-left:-65px}
-  .thumbs{grid-template-columns:repeat(2,50px)}
-  .thumb{width:50px;height:64px}
-  .picker p{font-size:.8rem}
-}
-/* ── CÓMO FUNCIONA */
-.como{background:var(--surface)}
-.como-grid{display:grid;gap:34px;align-items:center}
-.steps{list-style:none;margin:26px 0 0;padding:0;counter-reset:s}
-.steps li{counter-increment:s;display:grid;grid-template-columns:44px 1fr;gap:12px;padding:16px 0;border-top:1px solid var(--line)}
-.steps li:before{content:counter(s);font:600 1.5rem/1 var(--display);color:var(--accent)}
-.steps b{display:block;font-weight:600;margin-bottom:3px}
-.steps span{color:var(--ink-2)}
-.como figure{margin:0;border-radius:var(--r);overflow:hidden;background:#fff}
-
-/* ── BENEFICIOS (zig-zag) */
-.ben{display:grid;gap:40px;margin-top:34px}
-.ben article{display:grid;gap:18px;align-items:center}
-.ben figure{margin:0;border-radius:var(--r);overflow:hidden;background:#fff;aspect-ratio:1/1}
-.ben figure img{width:100%;height:100%;object-fit:cover}
-.ben h3{font-size:1.5rem}
-.ben p{color:var(--ink-2);margin-top:8px;max-width:42ch}
-.inks{display:flex;gap:8px;margin-top:14px}
-.inks i{width:26px;height:26px;border-radius:50%;box-shadow:inset 0 0 0 1px rgba(0,0,0,.18)}
-
-/* ── COMPARATIVA */
-.cmp{margin-top:26px}
-table{border-collapse:collapse;width:100%;font-size:.95rem;table-layout:fixed}
-col.c1{width:34%}
-th,td{text-align:left;padding:13px 12px;border-bottom:1px solid var(--line);vertical-align:top}
-thead th{font:600 .95rem/1.2 var(--display);color:var(--ink-2)}
-thead th:last-child,tbody td:last-child{background:var(--surface);color:var(--ink);font-weight:500}
-thead th:last-child{color:var(--ink);border-radius:10px 10px 0 0}
-tbody th{font-weight:500}
-
-/* ── SPECS */
-.specs dl{display:grid;grid-template-columns:1fr;margin:26px 0 0}
-.specs dl > div{display:grid;grid-template-columns:1fr;gap:6px;padding:14px 0;border-top:1px solid var(--line)}
-@media (min-width:600px){.specs dl > div{grid-template-columns:130px 1fr;gap:12px}}
-.specs dt{color:var(--ink-2);font-size:.95rem}
-.specs dd{margin:0}
-.chips{display:flex;flex-wrap:wrap;gap:6px}
-.chips span{padding:5px 10px;border-radius:999px;background:var(--surface);border:1px solid var(--line);font-size:.88rem}
-.gal{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:26px}
-.gal figure{margin:0;border-radius:12px;overflow:hidden;background:#fff;aspect-ratio:1/1}
-.gal img{width:100%;height:100%;object-fit:cover}
-.gal figcaption{position:absolute;left:-9999px}
-
-/* ── ENVÍO */
-.envio-grid{display:grid;gap:30px}
-.timeline{list-style:none;margin:24px 0 0;padding:0}
-.timeline li{position:relative;padding:0 0 22px 30px}
-.timeline li:before{content:"";position:absolute;left:5px;top:6px;width:10px;height:10px;border-radius:50%;background:var(--ink)}
-.timeline li:after{content:"";position:absolute;left:9px;top:18px;bottom:0;width:2px;background:var(--line)}
-.timeline li:last-child:after{display:none}
-.timeline b{display:block;font-weight:600}
-.timeline span{color:var(--ink-2)}
-.box{background:var(--surface);border-radius:var(--r);padding:22px}
-.box p+p{margin-top:10px}
-.box .warn{color:var(--ink);font-weight:500}
-
-/* ── FAQ */
-.faq{margin-top:22px}
-.faq details{border-top:1px solid var(--line)}
-.faq details:last-child{border-bottom:1px solid var(--line)}
-.faq summary{list-style:none;cursor:pointer;padding:18px 34px 18px 0;font-weight:600;position:relative;min-height:44px}
-.faq summary::-webkit-details-marker{display:none}
-.faq summary:after{content:"";position:absolute;right:6px;top:25px;width:10px;height:10px;border-right:2px solid var(--ink);border-bottom:2px solid var(--ink);transform:rotate(45deg);transition:transform .2s var(--ease)}
-.faq details[open] summary:after{transform:rotate(225deg);top:29px}
-.faq details p{padding:0 0 18px;color:var(--ink-2);max-width:62ch}
-
-/* ── PEDIDO */
-.pedido{background:var(--ink);color:#F3F4F1}
-.pedido h2{color:#fff}
-.pedido .lead{color:#C9CBC5}
-.form-wrap{display:grid;gap:26px;margin-top:26px}
-form{background:var(--surface);color:var(--ink);border-radius:18px;padding:22px 18px}
-.row{display:grid;gap:14px}
-.f{display:grid;gap:6px}
-.f label,.f legend{font-size:.9rem;font-weight:600}
-.f .opt{font-weight:400;color:var(--ink-2)}
-.in{width:100%;min-height:50px;padding:12px 14px;border-radius:11px;border:1.5px solid #C4C6C0;background:#fff;font-size:16px;transition:border-color .15s var(--ease)}
-.in:focus{border-color:var(--ink);outline:none;box-shadow:0 0 0 3px rgba(21,21,20,.12)}
-.in[aria-invalid="true"]{border-color:var(--err);background:#fff}
-.in[readonly]{background:#EEEFEC;color:var(--ink-2)}
-select.in{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23151514' stroke-width='2' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:38px}
-.es-err{min-height:0;font-size:.86rem;color:var(--err);font-weight:500}
+/* Formulaire */
+.pedido .lead{margin:-8px 0 16px;color:var(--ok);font-weight:600;font-size:15px}
+form{display:grid;gap:14px}
+.lbl,legend{display:block;font-size:14px;font-weight:600;margin:0 0 6px;padding:0}
+fieldset{border:0;margin:0;padding:0;min-width:0}
+.colors{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.colors label{position:relative;display:grid;justify-items:center;gap:4px;padding:6px 4px 8px;border:1.5px solid var(--line);border-radius:10px;font-size:13px;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.colors img{width:100%;max-width:64px;aspect-ratio:1/1;object-fit:contain}
+.colors input{position:absolute;opacity:0;pointer-events:none}
+.colors label:has(input:checked){border-color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink);font-weight:600}
+.colors label.on{border-color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink);font-weight:600}
+.colors label:has(input:focus-visible){outline:2px solid var(--ink);outline-offset:2px}
+.in{display:block;width:100%;min-height:50px;padding:12px 14px;border:1.5px solid #d4d4d4;border-radius:10px;background:#fff;font-size:16px;-webkit-appearance:none;appearance:none}
+select.in{background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23111' stroke-width='2' fill='none'/%3E%3C/svg%3E") no-repeat right 14px center;padding-right:36px}
+.in:focus{outline:none;border-color:var(--ink);box-shadow:0 0 0 3px rgba(17,17,17,.08)}
+.in[aria-invalid=true]{border-color:var(--err)}
+.in[readonly]{background:var(--soft);color:var(--mute)}
+.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10px}
+.es-err{color:var(--err);font-size:13px;margin-top:4px;min-height:0}
 .es-err:empty{display:none}
-fieldset{border:0;margin:0;padding:0}
-.colors{display:flex;gap:10px;flex-wrap:wrap;margin-top:4px}
-.colors label{position:relative;display:flex;align-items:center;gap:8px;min-height:46px;padding:6px 14px 6px 6px;border-radius:999px;border:1.5px solid #C4C6C0;background:#fff;cursor:pointer;font-weight:500;font-size:.95rem}
-.colors input{position:absolute;opacity:0;width:1px;height:1px}
-.colors i{width:30px;height:30px;border-radius:50%;box-shadow:inset 0 0 0 1px rgba(0,0,0,.15)}
-.colors input:checked+i{box-shadow:0 0 0 2px #fff,0 0 0 4px var(--ink)}
-.colors label:has(input:checked){border-color:var(--ink)}
-.colors input:focus-visible+i{outline:3px solid var(--accent);outline-offset:3px}
-.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.sum{margin-top:6px;padding:14px;border-radius:12px;background:#fff;border:1px solid var(--line);display:grid;gap:6px;font-size:.95rem}
-.sum div{display:flex;justify-content:space-between;gap:10px}
-.sum .tot{font:600 1.35rem/1.1 var(--display);padding-top:8px;border-top:1px dashed #C4C6C0}
-.sum small{color:var(--ink-2);font-size:.86rem}
-.terms{display:grid;grid-template-columns:26px 1fr;gap:10px;align-items:start;font-size:.92rem;cursor:pointer;min-height:44px}
-.terms input{width:22px;height:22px;margin:2px 0 0;accent-color:var(--ink)}
-.terms a{font-weight:600}
-.privacy{font-size:.8rem;color:var(--ink-2);line-height:1.45}
-.privacy a{color:var(--ink)}
-form .cta{width:100%;margin-top:4px}
-.cancel-note{font-size:.88rem;color:var(--ink-2)}
-.hp{position:absolute!important;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden}
-.aside-pedido{display:grid;gap:14px;align-content:start}
-.aside-pedido ul{list-style:none;padding:0;margin:0;display:grid;gap:10px}
-.aside-pedido li{display:grid;grid-template-columns:22px 1fr;gap:10px;color:#DADCD6}
-.aside-pedido svg{width:18px;height:18px;margin-top:3px;color:#fff}
+.sum{background:var(--soft);border-radius:var(--r);padding:14px;font-size:15px}
+.sum div{display:flex;justify-content:space-between;gap:12px;padding:3px 0}
+.sum .sel{color:var(--mute);font-size:13px}
+.sum .tot{border-top:1px solid #dcdcdc;margin-top:8px;padding-top:10px;font-weight:700;font-size:17px}
+.sum .ok{color:var(--ok);font-weight:600}
+.sum p{margin:8px 0 0;font-size:13px;color:var(--mute)}
+.legal-note{font-size:12px;line-height:1.45;color:var(--mute);margin:0}
+.hp{position:absolute!important;left:-9999px;width:1px;height:1px;overflow:hidden}
 
-/* ── Pied */
-footer{padding:40px 0 120px;font-size:.9rem;color:var(--ink-2)}
-footer nav{display:flex;flex-wrap:wrap;gap:8px 18px;margin:14px 0}
-footer a,footer button{color:var(--ink);text-underline-offset:3px}
-footer button{background:none;border:0;padding:0;text-decoration:underline;cursor:pointer;font-size:.9rem;min-height:44px}
-footer nav a{display:inline-flex;align-items:center;min-height:44px}
+footer{border-top:8px solid var(--soft);padding:22px 0 110px;font-size:13px;color:var(--mute)}
+footer nav{display:flex;flex-wrap:wrap;gap:6px 16px;margin-bottom:10px}
+footer nav a,footer nav button{color:var(--ink);text-decoration:underline;background:none;border:0;padding:6px 0;font-size:13px;cursor:pointer}
+footer p{margin:4px 0}
 
-/* ── Barre collante */
-#esSticky{position:fixed;left:0;right:0;bottom:0;z-index:40;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:rgba(236,237,234,.94);-webkit-backdrop-filter:saturate(1.4) blur(10px);backdrop-filter:saturate(1.4) blur(10px);border-top:1px solid var(--line);display:flex;align-items:center;gap:12px;transform:translateY(110%);transition:transform .3s var(--ease)}
+/* Barre collante */
+#esSticky{position:fixed;left:0;right:0;bottom:0;z-index:40;background:#fff;border-top:1px solid var(--line);padding:10px 16px calc(10px + env(safe-area-inset-bottom));display:flex;align-items:center;gap:12px;transform:translateY(110%);transition:transform .25s}
 #esSticky.on{transform:none}
-#esSticky .p{font:600 1.35rem/1 var(--display)}
-#esSticky small{display:block;font:400 .78rem/1.2 var(--body);color:var(--ink-2)}
-#esSticky .cta{flex:1;min-height:50px;font-size:1rem}
+#esSticky .p{line-height:1.2}
+#esSticky .p b{display:block;font-size:17px}
+#esSticky .p span{font-size:12px;color:var(--ok);font-weight:600}
+#esSticky .btn{flex:1;min-height:48px;font-size:16px}
 
-/* ── Bandeau cookies */
-#esConsent{position:fixed;left:10px;right:10px;bottom:calc(10px + env(safe-area-inset-bottom));z-index:60;max-width:560px;margin-inline:auto;background:#fff;border-radius:16px;box-shadow:0 18px 50px -12px rgba(21,21,20,.35),0 0 0 1px var(--line);padding:14px 16px;font-size:.88rem;line-height:1.4;display:none}
+/* Cookies */
+#esConsent{position:fixed;left:8px;right:8px;bottom:8px;z-index:60;background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:0 8px 30px rgba(0,0,0,.14);padding:12px 14px calc(12px + env(safe-area-inset-bottom));display:none;max-width:520px;margin:0 auto}
 #esConsent.on{display:block}
-#esConsent p{color:var(--ink-2)}
-#esConsent a{color:var(--ink);font-weight:600}
-#esConsent .btns{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}
-#esConsent button{min-height:46px;border-radius:11px;border:1.5px solid var(--ink);background:#fff;color:var(--ink);font-weight:600;font-size:.95rem;cursor:pointer}
+#esConsent p{margin:0 0 10px;font-size:13px;line-height:1.4;color:#333}
+#esConsent .row{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+#esConsent button{min-height:44px;border-radius:10px;border:1.5px solid var(--ink);background:#fff;font-size:15px;font-weight:600;cursor:pointer}
 
-/* ── Toast + modal */
-#esToast{position:fixed;left:50%;top:14px;z-index:80;transform:translate(-50%,-160%);max-width:calc(100% - 28px);width:max-content;padding:12px 16px;border-radius:12px;background:var(--err);color:#fff;font-weight:500;font-size:.95rem;box-shadow:0 10px 30px -10px rgba(0,0,0,.4);transition:transform .3s var(--ease)}
-#esToast.on{transform:translate(-50%,0)}
-#esModal{border:0;padding:0;border-radius:20px;width:min(440px,calc(100% - 28px));max-height:calc(100dvh - 40px);color:var(--ink);background:var(--surface)}
-#esModal::backdrop{background:rgba(21,21,20,.55)}
-#esModal .in-modal{padding:26px 22px 22px;display:grid;gap:14px}
-#esModal .check{width:54px;height:54px;border-radius:50%;background:var(--ok);display:grid;place-items:center}
-#esModal .check svg{width:28px;height:28px;color:#fff}
-#esModal h3{font-size:1.6rem}
-#esModal .ref{font:600 1.05rem/1 var(--body);letter-spacing:.02em;background:#fff;border:1px dashed #BFC1BB;border-radius:10px;padding:11px 12px;display:flex;justify-content:space-between}
-#esModal ol{margin:0;padding-left:20px;color:var(--ink-2);display:grid;gap:6px}
-#esModal .cta{width:100%}
+/* Toast + modal */
+#esToast{position:fixed;left:12px;right:12px;top:12px;z-index:70;background:var(--err);color:#fff;border-radius:10px;padding:12px 14px;font-size:14px;font-weight:600;transform:translateY(calc(-100% - 24px));visibility:hidden;transition:transform .25s,visibility 0s .25s;max-width:520px;margin:0 auto}
+#esToast.on{transform:none;visibility:visible;transition:transform .25s}
+#esModal{border:0;border-radius:16px;padding:0;width:min(92vw,420px);max-width:420px}
+#esModal::backdrop{background:rgba(0,0,0,.45)}
+#esModal .in-m{padding:24px 20px 20px;text-align:center}
+#esModal .chk{width:52px;height:52px;border-radius:50%;background:var(--okbg);color:var(--ok);display:grid;place-items:center;margin:0 auto 12px}
+#esModal h3{margin:0 0 4px;font-size:20px}
+#esModal .ref{display:inline-block;margin:10px 0;padding:6px 12px;border-radius:8px;background:var(--soft);font-weight:700;letter-spacing:.02em}
+#esModal ul{list-style:none;padding:0;margin:8px 0 16px;text-align:left;font-size:14px;color:#333;display:grid;gap:6px}
+#esModal li{position:relative;padding-left:22px}
+#esModal li::before{content:"✓";position:absolute;left:0;top:0;color:var(--ok);font-weight:700}
 
-/* ── Desktop */
 @media (min-width:900px){
-  .sec{padding:96px 0}
-  .problema{padding:56px 0 30px}
-  .pains{grid-template-columns:repeat(3,1fr);gap:24px}
-  .pains li,.pains li:last-child{border-bottom:0}
-  .hero-grid{grid-template-columns:1.05fr .95fr;column-gap:56px;row-gap:18px;grid-template-areas:'head demo' 'body demo';align-items:end}
-  .hero-body{align-self:start}
-  .stage{width:230px;height:456px}
-  .screen{top:156px;left:52px;right:52px;bottom:40px}
-  .cam{width:96px;height:96px}
-  .como-grid{grid-template-columns:1fr 1fr;gap:64px}
-  .ben article{grid-template-columns:1fr 1fr;gap:56px}
-  .ben article:nth-child(even) figure{order:2}
-  .ben figure{aspect-ratio:4/3}
-  .gal{grid-template-columns:repeat(4,1fr)}
-  .specs .cols{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
-  .envio-grid{grid-template-columns:1.1fr .9fr;gap:56px}
-  .form-wrap{grid-template-columns:.8fr 1.2fr;gap:56px}
-  form{padding:30px}
+  .wrap{padding:0 24px}
+  .product{grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:40px;padding-top:28px;padding-bottom:40px;align-items:start}
+  .gal{margin:0}
+  .slides figure{border-radius:var(--r)}
+  .dots{display:none}
+  .thumbs{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin-top:10px}
+  .thumbs button{padding:0;border:1.5px solid var(--line);border-radius:8px;background:#fff;cursor:pointer;aspect-ratio:1/1;overflow:hidden}
+  .thumbs button[aria-current=true]{border-color:var(--ink)}
+  .info{position:sticky;top:20px}
+  .info h1{font-size:30px}
+  .how{grid-template-columns:320px 1fr;align-items:center;gap:32px}
+  .sec .narrow,.pedido .narrow{max-width:560px}
+  .pedido .narrow{margin:0 auto}
   #esSticky{display:none}
+  footer{padding-bottom:40px}
 }
+@media (max-width:359px){.colors{grid-template-columns:repeat(2,minmax(0,1fr))}.two{grid-template-columns:1fr}.price b{font-size:25px}}
 </style>
 </head>
 <body>
 
-<div class="wrap top" role="banner">
-  <span class="mark"><i aria-hidden="true"></i>NFC Case</span>
-  <small>Pagas al recibir</small>
-</div>
+<div class="bar" role="note"><span>Envío gratis</span> · <span>Pago a la entrega</span></div>
+<header class="top"><div class="wrap"><a class="logo" href="#">NFC Case</a><a class="go" href="#pedido">Pedir</a></div></header>
 
-<section class="problema wrap" data-sec="problema" aria-labelledby="t-problema">
-  <h2 id="t-problema">¿Tu funda lleva meses con la misma cara?</h2>
-  <ul class="pains">
-    <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>La compraste bonita. A las tres semanas ya ni la miras.</li>
-    <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Las transparentes amarillean y las de diseño acaban en un cajón.</li>
-    <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Cambiar de estilo siempre significa comprar otra funda.</li>
-  </ul>
-</section>
+<main>
+<section class="wrap product" data-sec="hero" aria-labelledby="t-hero">
+  <div class="gal">
+    <div class="slides" id="esSlides" aria-label="Fotos del producto" tabindex="0">
+      <figure data-color="negro"><img src="assets/img/p-negro-600.webp" srcset="assets/img/p-negro-600.webp 600w, assets/img/p-negro-1000.webp 1000w" sizes="(min-width:900px) 520px, 100vw" width="600" height="600" alt="Funda NFC negra con una imagen en la pantalla trasera" fetchpriority="high"></figure>
+      <figure data-color="negro"><img src="assets/img/p-negro-app-600.webp" srcset="assets/img/p-negro-app-600.webp 600w, assets/img/p-negro-app-1000.webp 1000w" sizes="(min-width:900px) 520px, 100vw" width="600" height="600" loading="lazy" alt="La misma foto en la app del iPhone y en la funda negra"></figure>
+      <figure data-color="naranja"><img src="assets/img/p-naranja-600.webp" srcset="assets/img/p-naranja-600.webp 600w, assets/img/p-naranja-1000.webp 1000w" sizes="(min-width:900px) 520px, 100vw" width="600" height="600" loading="lazy" alt="Funda NFC naranja"></figure>
+      <figure data-color="gris"><img src="assets/img/p-gris-600.webp" srcset="assets/img/p-gris-600.webp 600w, assets/img/p-gris-1000.webp 1000w" sizes="(min-width:900px) 520px, 100vw" width="600" height="600" loading="lazy" alt="Funda NFC gris"></figure>
+      <figure data-color="rosa"><img src="assets/img/p-rosa-app-600.webp" srcset="assets/img/p-rosa-app-600.webp 600w, assets/img/p-rosa-app-1000.webp 1000w" sizes="(min-width:900px) 520px, 100vw" width="600" height="600" loading="lazy" alt="Funda NFC rosa junto a la app del iPhone"></figure>
+      <figure data-color="gris"><img src="assets/img/p-gris-app-600.webp" srcset="assets/img/p-gris-app-600.webp 600w, assets/img/p-gris-app-1000.webp 1000w" sizes="(min-width:900px) 520px, 100vw" width="600" height="600" loading="lazy" alt="Funda NFC gris con la Estatua de la Libertad en la pantalla"></figure>
+    </div>
+    <div class="dots" id="esDots" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i><i></i><i></i></div>
+    <div class="thumbs" id="esThumbs">
+      <button type="button" aria-label="Foto 1" aria-current="true"><img src="assets/img/p-negro-600.webp" width="600" height="600" alt="" loading="lazy"></button>
+      <button type="button" aria-label="Foto 2"><img src="assets/img/p-negro-app-600.webp" width="600" height="600" alt="" loading="lazy"></button>
+      <button type="button" aria-label="Foto 3"><img src="assets/img/p-naranja-600.webp" width="600" height="600" alt="" loading="lazy"></button>
+      <button type="button" aria-label="Foto 4"><img src="assets/img/p-gris-600.webp" width="600" height="600" alt="" loading="lazy"></button>
+      <button type="button" aria-label="Foto 5"><img src="assets/img/p-rosa-app-600.webp" width="600" height="600" alt="" loading="lazy"></button>
+      <button type="button" aria-label="Foto 6"><img src="assets/img/p-gris-app-600.webp" width="600" height="600" alt="" loading="lazy"></button>
+    </div>
+  </div>
 
-<section class="hero wrap" data-sec="hero" id="hero" aria-labelledby="t-hero">
-  <div class="hero-grid">
-    <div class="hero-head">
-      <h1 id="t-hero">Una funda. La imagen que tú quieras, cuando quieras.</h1>
-    </div>
-    <div class="hero-body">
-      <p class="lead">Lleva una pantalla de tinta electrónica en la parte trasera. Eliges la foto en tu iPhone, lo acercas y la funda la muestra. Sin batería: la imagen se queda fija.</p>
-      <div class="price-row">
-        <span class="price" data-price>69 €</span>
-        <span class="price-meta">IVA incluido · Envío gratis<br>Pago contra reembolso</span>
-      </div>
-      <div class="note" data-delivery-note><b aria-hidden="true"></b><span>Reserva sin pago · Envío previsto en 2-4 semanas</span></div>
-      <a class="cta" href="#pedido" id="esHeroCta">Reservar la mía</a>
-      <p class="micro">No pagas nada ahora. Te llamamos antes de enviarla y pagas al repartidor.</p>
-    </div>
-
-    <div class="demo" id="esDemo" aria-label="Demostración: cambia la imagen de la funda">
-      <div class="stage" id="esStage">
-        <div class="case" aria-hidden="true">
-          <div class="cam"><i></i><i></i><i></i></div>
-          <div class="nfc">NFC</div>
-        </div>
-        <div class="screen">
-          <img data-demo-screen src="assets/img/eink-trazo.webp" width="330" height="600" alt="Pantalla de tinta electrónica mostrando un trazo de pincel negro, rojo y amarillo" fetchpriority="high">
-          <div class="flash k"></div><div class="flash w"></div>
-        </div>
-        <div class="bar" aria-hidden="true"><i></i></div>
-        <div class="phone" aria-hidden="true"></div>
-      </div>
-      <div class="picker">
-        <p>Toca una imagen y mira cómo cambia:</p>
-        <div class="thumbs" role="group" aria-label="Imágenes de ejemplo">
-          <button type="button" class="thumb" data-img="trazo" aria-pressed="true" aria-label="Trazo de pincel"><img src="assets/img/eink-trazo.webp" width="330" height="600" alt="" loading="lazy"></button>
-          <button type="button" class="thumb" data-img="flores" aria-pressed="false" aria-label="Flores"><img src="assets/img/eink-flores.webp" width="330" height="600" alt="" loading="lazy"></button>
-          <button type="button" class="thumb" data-img="anime" aria-pressed="false" aria-label="Ilustración de una chica"><img src="assets/img/eink-anime.webp" width="330" height="600" alt="" loading="lazy"></button>
-          <button type="button" class="thumb" data-img="libertad" aria-pressed="false" aria-label="Estatua de la Libertad"><img src="assets/img/eink-libertad.webp" width="330" height="600" alt="" loading="lazy"></button>
-        </div>
-        <button type="button" class="thumb" data-demo-next style="width:auto;height:44px;padding:0 14px;font-weight:600;font-size:.9rem;background:var(--surface);border-color:var(--line)">Otra imagen</button>
-        <div class="swatches" role="group" aria-label="Color de la funda">
-          <button type="button" class="sw sw-negro" data-case="negro" aria-pressed="true" aria-label="Negro"></button>
-          <button type="button" class="sw sw-gris" data-case="gris" aria-pressed="false" aria-label="Gris"></button>
-          <button type="button" class="sw sw-rosa" data-case="rosa" aria-pressed="false" aria-label="Rosa"></button>
-          <button type="button" class="sw sw-naranja" data-case="naranja" aria-pressed="false" aria-label="Naranja"></button>
-        </div>
-      </div>
-      <p class="demo-note">Imágenes reales de la pantalla. En la vida real el cambio tarda unos 10-13 segundos; aquí va acelerado.</p>
-    </div>
+  <div class="info">
+    <h1 id="t-hero">Funda NFC con pantalla de tinta electrónica</h1>
+    <p class="sub">Elige una foto en tu iPhone, acércalo y la funda la muestra. Sin batería.</p>
+    <div class="price"><b data-price>69,00 €</b><small>IVA incluido</small></div>
+    <ul class="perks">
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="6" width="19" height="12" rx="2"/><circle cx="12" cy="12" r="2.6"/><path d="M6 9.5v5M18 9.5v5"/></svg><div><b>Pago a la entrega</b><span>Pagas en efectivo al repartidor al recibirla</span></div></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 6.5h11v9h-11z"/><path d="M13.5 9.5h4l3 3v3h-7"/><circle cx="6.5" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg><div><b>Envío gratis</b><span>A Península y Baleares</span></div></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12a8 8 0 1 0 2.4-5.7"/><path d="M4 4.5v4h4"/></svg><div><b>14 días de devolución</b><span>Desde que la recibes</span></div></li>
+    </ul>
+    <p class="note" data-delivery-note><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Reserva sin pago · Envío previsto en 2-4 semanas</span></p>
+    <a class="btn" id="esHeroCta" href="#pedido">Pedir ahora</a>
+    <p class="under">No pagas nada hasta recibirla</p>
   </div>
 </section>
 
-<section class="como sec" data-sec="como" aria-labelledby="t-como">
-  <div class="wrap como-grid">
-    <div>
-      <h2 id="t-como">Cómo se cambia la imagen</h2>
+<section class="sec" data-sec="como" aria-labelledby="t-como">
+  <div class="wrap how">
+    <img src="assets/img/p-rosa-app-600.webp" srcset="assets/img/p-rosa-app-600.webp 600w, assets/img/p-rosa-app-1000.webp 1000w" sizes="(min-width:900px) 320px, 100vw" width="600" height="600" loading="lazy" alt="La foto elegida en la app aparece en la funda">
+    <div class="narrow">
+      <h2 id="t-como">Cómo funciona</h2>
       <ol class="steps">
-        <li><div><b>Abre la app en tu iPhone</b><span>Elige una foto, un dibujo o una frase.</span></div></li>
-        <li><div><b>Acerca el iPhone a la funda</b><span>El NFC le pasa la imagen y la energía justa para dibujarla.</span></div></li>
-        <li><div><b>Espera unos segundos</b><span>La tinta electrónica la dibuja en 10-13 segundos y se queda ahí, sin batería.</span></div></li>
+        <li><div><b>Elige una imagen</b><span>Abre la app y elige una foto, un dibujo o una frase.</span></div></li>
+        <li><div><b>Acerca el iPhone</b><span>Ponlo sobre la parte trasera de la funda.</span></div></li>
+        <li><div><b>Listo</b><span>En 10-13 segundos la imagen queda fija, sin batería.</span></div></li>
       </ol>
-    </div>
-    <figure>
-      <img src="assets/img/negro-app-900.webp" srcset="assets/img/negro-app-480.webp 480w, assets/img/negro-app-900.webp 900w" sizes="(min-width:900px) 520px, 100vw" width="900" height="938" alt="iPhone con la app abierta junto a la funda NFC Case negra mostrando la misma foto" loading="lazy">
-    </figure>
-  </div>
-</section>
-
-<section class="sec wrap" data-sec="beneficios" aria-labelledby="t-ben">
-  <h2 id="t-ben">Lo que cambia cuando la usas</h2>
-  <div class="ben">
-    <article>
-      <figure><img src="assets/img/naranja-pro-900.webp" srcset="assets/img/naranja-pro-480.webp 480w, assets/img/naranja-pro-900.webp 900w" sizes="(min-width:900px) 500px, 100vw" width="900" height="900" alt="Funda NFC Case naranja con un trazo rojo y amarillo en la pantalla" loading="lazy"></figure>
-      <div><h3>Sin batería y sin cargador</h3><p>La pantalla solo necesita energía mientras cambia de imagen, y esa energía se la da tu iPhone al acercarlo.</p></div>
-    </article>
-    <article>
-      <figure><img src="assets/img/gris-app-900.webp" srcset="assets/img/gris-app-480.webp 480w, assets/img/gris-app-900.webp 900w" sizes="(min-width:900px) 500px, 100vw" width="900" height="900" alt="Funda gris con la Estatua de la Libertad en la pantalla y el iPhone con la app" loading="lazy"></figure>
-      <div><h3>La imagen no se apaga</h3><p>La tinta electrónica mantiene el dibujo aunque tu iPhone se quede sin batería o esté apagado.</p></div>
-    </article>
-    <article>
-      <figure><img src="assets/img/rosa-app-900.webp" srcset="assets/img/rosa-app-480.webp 480w, assets/img/rosa-app-900.webp 900w" sizes="(min-width:900px) 500px, 100vw" width="900" height="900" alt="Funda rosa con un retrato en la pantalla junto al iPhone" loading="lazy"></figure>
-      <div>
-        <h3>Cuatro tintas de verdad</h3>
-        <p>Negro, blanco, rojo y amarillo. Los azules y los verdes se ven en tonos grises, así que lucen más las imágenes con contraste.</p>
-        <div class="inks" aria-label="Colores de la tinta"><i style="background:#151514"></i><i style="background:#F4F4EF"></i><i style="background:#C0282A"></i><i style="background:#E9B820"></i></div>
-      </div>
-    </article>
-  </div>
-</section>
-
-<section class="sec" data-sec="comparativa" aria-labelledby="t-cmp" style="background:var(--surface)">
-  <div class="wrap">
-    <h2 id="t-cmp">Frente a otra funda</h2>
-    <div class="cmp" role="region" aria-label="Tabla comparativa">
-      <table>
-        <colgroup><col class="c1"><col><col></colgroup>
-        <thead><tr><th scope="col"><span class="hp">Criterio</span></th><th scope="col">Otra funda</th><th scope="col">NFC Case</th></tr></thead>
-        <tbody>
-          <tr><th scope="row">Cambiar el diseño</th><td>Comprar otra funda</td><td>Desde la app, las veces que quieras</td></tr>
-          <tr><th scope="row">Tus propias fotos</th><td>Solo por encargo, y fija</td><td>Sí, cuando quieras</td></tr>
-          <tr><th scope="row">Batería o carga</th><td>No</td><td>No</td></tr>
-          <tr><th scope="row">Cambiar de estilo cuesta</th><td>Otra funda</td><td>0 €</td></tr>
-        </tbody>
-      </table>
+      <p class="fine">La pantalla muestra negro, blanco, rojo y amarillo. Los azules y los verdes se ven en gris.</p>
     </div>
   </div>
 </section>
 
-<section class="sec wrap specs" data-sec="specs" aria-labelledby="t-specs">
-  <div class="cols">
-    <div>
-      <h2 id="t-specs">Modelos y detalles</h2>
-      <dl>
-        <div><dt>Modelos</dt><dd><div class="chips"><span>iPhone 13/14</span><span>14 Pro</span><span>14 Pro Max</span><span>15</span><span>15 Pro</span><span>16</span><span>16 Plus</span><span>16 Pro</span><span>16 Pro Max</span><span>17</span><span>17 Pro</span><span>17 Pro Max</span></div></dd></div>
-        <div><dt>Colores</dt><dd>Negro, gris, rosa y naranja</dd></div>
-        <div><dt>Pantalla</dt><dd>Tinta electrónica en la parte trasera, 4 colores (negro, blanco, rojo y amarillo)</dd></div>
-        <div><dt>Conexión</dt><dd>NFC de tu iPhone, a través de una app</dd></div>
-        <div><dt>Batería</dt><dd>No tiene: no se carga nunca</dd></div>
-        <div><dt>Protección</dt><dd>Cubre la parte trasera y los laterales, con la cámara y los botones despejados</dd></div>
-      </dl>
-    </div>
-    <div class="gal">
-      <figure><img src="assets/img/negro-480.webp" width="480" height="480" alt="Funda NFC Case negra" loading="lazy"></figure>
-      <figure><img src="assets/img/gris-480.webp" width="480" height="480" alt="Funda NFC Case gris" loading="lazy"></figure>
-      <figure><img src="assets/img/rosa-caja-480.webp" width="480" height="480" alt="Funda NFC Case rosa en su embalaje" loading="lazy"></figure>
-      <figure><img src="assets/img/naranja-480.webp" width="480" height="480" alt="Funda NFC Case naranja" loading="lazy"></figure>
-      <figure><img src="assets/img/negro-pro-480.webp" width="480" height="480" alt="Funda NFC Case negra para modelos Pro" loading="lazy"></figure>
-      <figure><img src="assets/img/negro-app2-480.webp" width="480" height="480" alt="Funda negra y app con la misma imagen" loading="lazy"></figure>
-    </div>
-  </div>
-</section>
-
-<section class="sec" data-sec="envio" aria-labelledby="t-envio" style="background:var(--surface)">
-  <div class="wrap envio-grid">
-    <div>
-      <h2 id="t-envio">Así funciona tu reserva</h2>
-      <ol class="timeline">
-        <li><b>Hoy reservas, sin pagar nada</b><span>Solo necesitamos tu modelo, el color y la dirección.</span></li>
-        <li><b>Te llamamos antes de enviarla</b><span>Confirmamos contigo el pedido y la dirección.</span></li>
-        <li><b>Te la enviamos</b><span>Envío previsto en 2-4 semanas, gratis a Península y Baleares.</span></li>
-        <li><b>Pagas al recibirla</b><span>69 € en efectivo al repartidor, sin recargo por contra reembolso.</span></li>
-      </ol>
-    </div>
-    <div class="box">
-      <p><b>Reserva sin pago.</b> Puedes cancelar sin coste en cualquier momento antes del envío.</p>
-      <p class="warn">Si no podemos enviarla en ese plazo, cancelamos la reserva y te avisamos.</p>
-      <p>Por ahora no enviamos a Canarias, Ceuta ni Melilla.</p>
-      <p>Una vez recibida, tienes 14 días para devolverla sin dar explicaciones.</p>
-    </div>
-  </div>
-</section>
-
-<section class="sec wrap" data-sec="faq" aria-labelledby="t-faq">
-  <h2 id="t-faq">Preguntas frecuentes</h2>
-  <div class="faq">
-    <details><summary>¿Tengo que pagar algo ahora?</summary><p>No. Reservas sin pagar. Pagas 69 € en efectivo al repartidor cuando recibes la funda.</p></details>
-    <details><summary>¿Cuándo me llega?</summary><p>El envío está previsto en 2-4 semanas. Te llamamos antes de enviarla. Si no podemos enviarla en ese plazo, cancelamos la reserva y te avisamos.</p></details>
-    <details><summary>¿Se ve igual que en la pantalla del móvil?</summary><p>No exactamente. Es tinta electrónica de 4 colores: negro, blanco, rojo y amarillo. De cerca se ven los puntos de tinta y los azules y verdes salen en grises. Las imágenes con contraste son las que mejor quedan.</p></details>
-    <details><summary>¿Cuánto tarda en cambiar la imagen?</summary><p>Entre 10 y 13 segundos. Mantén el iPhone quieto sobre la funda hasta que termine.</p></details>
-    <details><summary>¿Hay que cargarla?</summary><p>No. No tiene batería: la energía para cambiar la imagen la pone tu iPhone por NFC, y la imagen se queda fija sin consumir nada.</p></details>
-    <details><summary>¿Es compatible con mi iPhone?</summary><p>Hay versión para iPhone 13/14, 14 Pro, 14 Pro Max, 15, 15 Pro, 16, 16 Plus, 16 Pro, 16 Pro Max, 17, 17 Pro y 17 Pro Max. Elige tu modelo en el formulario.</p></details>
-    <details><summary>¿Afecta a la carga inalámbrica?</summary><p>La funda añade grosor, así que la carga inalámbrica puede ir más lenta. Si quieres cargar rápido, quítala.</p></details>
-    <details><summary>¿Y si no me convence?</summary><p>Tienes 14 días desde que la recibes para devolverla sin dar explicaciones. Los gastos de devolución corren a tu cargo y te devolvemos el importe en un máximo de 14 días. Más detalles en <a href="legal/devoluciones.html">Devoluciones</a>.</p></details>
-    <details><summary>¿El precio incluye IVA?</summary><p>Sí. 69 € con IVA incluido, envío gratis y sin recargo por pago contra reembolso.</p></details>
+<section class="sec" data-sec="faq" aria-labelledby="t-faq">
+  <div class="wrap narrow">
+    <h2 id="t-faq">Preguntas frecuentes</h2>
+    <details><summary>¿Tengo que pagar algo ahora?</summary><p>No. Pagas 69 € en efectivo al repartidor cuando recibes la funda. Sin recargo por pago a la entrega.</p></details>
+    <details><summary>¿Cuándo me llega?</summary><p>El envío está previsto en 2-4 semanas y te llamamos antes de enviarla. Si no podemos enviarla en ese plazo, cancelamos la reserva y te avisamos. Por ahora no enviamos a Canarias, Ceuta ni Melilla.</p></details>
+    <details><summary>¿Es compatible con mi iPhone?</summary><p>Hay versión para iPhone 13/14, 14 Pro, 14 Pro Max, 15, 15 Pro, 16, 16 Plus, 16 Pro, 16 Pro Max, 17, 17 Pro y 17 Pro Max.</p></details>
+    <details><summary>¿Hay que cargarla?</summary><p>No. La energía para cambiar la imagen la da tu iPhone al acercarlo, y la imagen se queda aunque el móvil esté apagado.</p></details>
+    <details><summary>¿Afecta a la carga inalámbrica?</summary><p>Puede ir más lenta por el grosor de la funda. Si quieres cargar rápido, quítala.</p></details>
+    <details><summary>¿Y si no me convence?</summary><p>Tienes 14 días desde que la recibes para devolverla sin dar explicaciones. Los gastos de devolución corren a tu cargo. Más detalles en <a href="legal/devoluciones.html">Devoluciones</a>.</p></details>
   </div>
 </section>
 
 <section class="sec pedido" data-sec="pedido" id="pedido" aria-labelledby="t-pedido">
-  <div class="wrap">
-    <h2 id="t-pedido">Reserva tu NFC Case</h2>
-    <p class="lead" style="margin-top:10px">Sin pagar nada ahora. Pagas 69 € al recibirla.</p>
-    <div class="form-wrap">
-      <div class="aside-pedido">
-        <ul>
-          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" stroke="currentColor" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Pago contra reembolso, en efectivo al repartidor</li>
-          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" stroke="currentColor" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Envío gratis a Península y Baleares</li>
-          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" stroke="currentColor" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>14 días para devolverla una vez recibida</li>
-        </ul>
-        <p class="note" data-delivery-note style="color:var(--ink)"><b aria-hidden="true"></b><span>Reserva sin pago · Envío previsto en 2-4 semanas</span></p>
+  <div class="wrap narrow">
+    <h2 id="t-pedido">Haz tu pedido</h2>
+    <p class="lead">Pago a la entrega · Envío gratis</p>
+
+    <form id="esForm" novalidate autocomplete="on">
+      <fieldset><legend>Color</legend>
+        <div class="colors">
+          <label class="on"><input type="radio" name="color" value="negro" checked><img src="assets/img/p-negro-600.webp" width="600" height="600" alt="" loading="lazy">Negro</label>
+          <label><input type="radio" name="color" value="gris"><img src="assets/img/p-gris-600.webp" width="600" height="600" alt="" loading="lazy">Gris</label>
+          <label><input type="radio" name="color" value="rosa"><img src="assets/img/p-rosa-app-600.webp" width="600" height="600" alt="" loading="lazy">Rosa</label>
+          <label><input type="radio" name="color" value="naranja"><img src="assets/img/p-naranja-600.webp" width="600" height="600" alt="" loading="lazy">Naranja</label>
+        </div>
+        <div class="es-err" data-for="color" aria-live="polite"></div>
+      </fieldset>
+
+      <div><label class="lbl" for="esModel">Modelo de iPhone</label>
+        <select class="in" id="esModel" name="model" required>
+          <option value="">Elige tu modelo</option>
+          <option value="13/14">iPhone 13 / 14</option>
+          <option value="14 Pro">iPhone 14 Pro</option>
+          <option value="14 Pro Max">iPhone 14 Pro Max</option>
+          <option value="15">iPhone 15</option>
+          <option value="15 Pro">iPhone 15 Pro</option>
+          <option value="16">iPhone 16</option>
+          <option value="16 Plus">iPhone 16 Plus</option>
+          <option value="16 Pro">iPhone 16 Pro</option>
+          <option value="16 Pro Max">iPhone 16 Pro Max</option>
+          <option value="17">iPhone 17</option>
+          <option value="17 Pro">iPhone 17 Pro</option>
+          <option value="17 Pro Max">iPhone 17 Pro Max</option>
+        </select>
+        <div class="es-err" data-for="model" aria-live="polite"></div></div>
+
+      <div><label class="lbl" for="esName">Nombre y apellidos</label>
+        <input class="in" id="esName" name="name" type="text" autocomplete="name" enterkeyhint="next" required maxlength="120">
+        <div class="es-err" data-for="name" aria-live="polite"></div></div>
+
+      <div><label class="lbl" for="esPhone">Móvil</label>
+        <input class="in" id="esPhone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="612 345 678" enterkeyhint="next" required>
+        <div class="es-err" data-for="phone" aria-live="polite"></div></div>
+
+      <div><label class="lbl" for="esAddr">Dirección</label>
+        <input class="in" id="esAddr" name="address" type="text" autocomplete="street-address" placeholder="Calle, número, piso y puerta" enterkeyhint="next" required maxlength="250">
+        <div class="es-err" data-for="address" aria-live="polite"></div></div>
+
+      <div><div class="two">
+          <div><label class="lbl" for="esCp">Código postal</label>
+            <input class="in" id="esCp" name="cp" type="text" inputmode="numeric" autocomplete="postal-code" maxlength="5" pattern="[0-9]{5}" enterkeyhint="next" required></div>
+          <div><label class="lbl" for="esProv">Provincia</label>
+            <input class="in" id="esProv" name="provincia" type="text" readonly tabindex="-1" placeholder="Automática"></div>
+        </div>
+        <div class="es-err" data-for="cp" aria-live="polite"></div></div>
+
+      <div><label class="lbl" for="esCity">Localidad</label>
+        <input class="in" id="esCity" name="city" type="text" autocomplete="address-level2" enterkeyhint="done" required maxlength="80">
+        <div class="es-err" data-for="city" aria-live="polite"></div></div>
+
+      <div class="sum" aria-live="polite">
+        <div><span>NFC Case <span class="sel" id="esSel">· Negro</span></span><span data-price id="esLine">69,00 €</span></div>
+        <div><span>Envío</span><span class="ok">Gratis</span></div>
+        <div class="tot"><span>Total</span><span id="esTotal">69,00 €</span></div>
+        <p>IVA incluido · Pagas al recibirla, en efectivo · Envío previsto en 2-4 semanas. Si no podemos enviarla en ese plazo, cancelamos la reserva y te avisamos.</p>
       </div>
 
-      <form id="esForm" novalidate autocomplete="on">
-        <div class="row">
-          <div class="f"><label for="esName">Nombre y apellido</label>
-            <input class="in" id="esName" name="name" type="text" autocomplete="name" enterkeyhint="next" required maxlength="120">
-            <div class="es-err" data-for="name" aria-live="polite"></div></div>
+      <div class="hp" aria-hidden="true"><label for="esHp">No rellenar</label><input id="esHp" name="es_ref_9c41" type="text" tabindex="-1" autocomplete="off"></div>
 
-          <div class="f"><label for="esPhone">Móvil</label>
-            <input class="in" id="esPhone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="612 345 678" enterkeyhint="next" required>
-            <div class="es-err" data-for="phone" aria-live="polite"></div></div>
-
-          <div class="f"><label for="esEmail">Correo <span class="opt">(opcional)</span></label>
-            <input class="in" id="esEmail" name="email" type="email" inputmode="email" autocomplete="email" enterkeyhint="next">
-            <div class="es-err" data-for="email" aria-live="polite"></div></div>
-
-          <div class="f"><label for="esAddr">Dirección</label>
-            <input class="in" id="esAddr" name="address" type="text" autocomplete="street-address" placeholder="Calle, número, piso y puerta" enterkeyhint="next" required maxlength="250">
-            <div class="es-err" data-for="address" aria-live="polite"></div></div>
-
-          <div class="two">
-            <div class="f"><label for="esCp">Código postal</label>
-              <input class="in" id="esCp" name="cp" type="text" inputmode="numeric" autocomplete="postal-code" maxlength="5" pattern="[0-9]{5}" enterkeyhint="next" required></div>
-            <div class="f"><label for="esProv">Provincia</label>
-              <input class="in" id="esProv" name="provincia" type="text" readonly tabindex="-1" aria-describedby="esProvHelp"></div>
-          </div>
-          <div class="es-err" data-for="cp" aria-live="polite" style="margin-top:-8px"></div>
-          <span id="esProvHelp" class="hp">Se rellena con el código postal</span>
-
-          <div class="f"><label for="esCity">Localidad</label>
-            <input class="in" id="esCity" name="city" type="text" autocomplete="address-level2" enterkeyhint="next" required maxlength="80">
-            <div class="es-err" data-for="city" aria-live="polite"></div></div>
-
-          <div class="f"><label for="esModel">Modelo de iPhone</label>
-            <select class="in" id="esModel" name="model" required>
-              <option value="">Elige tu modelo</option>
-              <option value="13/14">iPhone 13 / 14</option>
-              <option value="14 Pro">iPhone 14 Pro</option>
-              <option value="14 Pro Max">iPhone 14 Pro Max</option>
-              <option value="15">iPhone 15</option>
-              <option value="15 Pro">iPhone 15 Pro</option>
-              <option value="16">iPhone 16</option>
-              <option value="16 Plus">iPhone 16 Plus</option>
-              <option value="16 Pro">iPhone 16 Pro</option>
-              <option value="16 Pro Max">iPhone 16 Pro Max</option>
-              <option value="17">iPhone 17</option>
-              <option value="17 Pro">iPhone 17 Pro</option>
-              <option value="17 Pro Max">iPhone 17 Pro Max</option>
-            </select>
-            <div class="es-err" data-for="model" aria-live="polite"></div></div>
-
-          <fieldset class="f"><legend>Color</legend>
-            <div class="colors">
-              <label><input type="radio" name="color" value="negro" checked><i style="background:var(--case-negro)"></i>Negro</label>
-              <label><input type="radio" name="color" value="gris"><i style="background:var(--case-gris)"></i>Gris</label>
-              <label><input type="radio" name="color" value="rosa"><i style="background:var(--case-rosa)"></i>Rosa</label>
-              <label><input type="radio" name="color" value="naranja"><i style="background:var(--case-naranja)"></i>Naranja</label>
-            </div>
-            <div class="es-err" data-for="color" aria-live="polite"></div>
-          </fieldset>
-
-          <div class="f"><label for="esQty">Cantidad</label>
-            <select class="in" id="esQty" name="quantity"><option value="1">1</option><option value="2">2</option><option value="3">3</option></select>
-            <div class="es-err" data-for="quantity" aria-live="polite"></div></div>
-
-          <div class="sum" aria-live="polite">
-            <div><span>NFC Case × <span id="esQtyLbl">1</span></span><span data-price id="esLine">69 €</span></div>
-            <div><span>Envío</span><span>Gratis</span></div>
-            <div class="tot"><span>Total</span><span id="esTotal">69,00 €</span></div>
-            <small>IVA incluido · Pago contra reembolso · Nada que pagar hoy</small>
-          </div>
-
-          <label class="terms"><input type="checkbox" id="esTerms" name="terms" required><span>He leído y acepto las <a href="legal/condiciones.html" target="_blank" rel="noopener">condiciones de compra</a> y la <a href="legal/privacidad.html" target="_blank" rel="noopener">política de privacidad</a>.</span></label>
-          <div class="es-err" data-for="consent_terms" aria-live="polite"></div>
-
-          <div class="hp" aria-hidden="true"><label for="esHp">No rellenar</label><input id="esHp" name="es_ref_9c41" type="text" tabindex="-1" autocomplete="off"></div>
-
-          <button class="cta" id="esSubmit" type="submit" disabled>Confirmar pedido con obligación de pago</button>
-          <p class="cancel-note">No pagas nada hasta recibirla. Si no podemos enviarla en ese plazo, cancelamos la reserva y te avisamos.</p>
-          <p class="privacy">Responsable: Matrix Tower LLC (marca Moul Pochetat). Usamos tus datos para gestionar la reserva, llamarte para confirmarla y entregarla. Base legal: ejecución del contrato. Puedes ejercer tus derechos en moulpochetat@gmail.com. Más información en la <a href="legal/privacidad.html">política de privacidad</a>.</p>
-        </div>
-      </form>
-    </div>
+      <button class="btn" id="esSubmit" type="submit">Confirmar pedido con obligación de pago</button>
+      <p class="legal-note">Al confirmar aceptas las <a href="legal/condiciones.html" target="_blank" rel="noopener">condiciones de compra</a> y la <a href="legal/privacidad.html" target="_blank" rel="noopener">política de privacidad</a>. Responsable: Matrix Tower LLC (Moul Pochetat). Usamos tus datos solo para gestionar, confirmar y entregar tu pedido.</p>
+    </form>
   </div>
 </section>
+</main>
 
-<footer class="wrap" data-sec="legal">
-  <span class="mark"><i aria-hidden="true"></i>NFC Case</span>
-  <nav aria-label="Información legal">
-    <a href="legal/aviso-legal.html">Aviso legal</a>
-    <a href="legal/privacidad.html">Privacidad</a>
-    <a href="legal/condiciones.html">Condiciones</a>
-    <a href="legal/devoluciones.html">Devoluciones</a>
-    <button type="button" id="esCookieSettings">Configurar cookies</button>
-  </nav>
-  <p>Moul Pochetat · Matrix Tower LLC (Wyoming, EE. UU.) · <a href="mailto:moulpochetat@gmail.com">moulpochetat@gmail.com</a></p>
-  <p style="margin-top:8px">iPhone es una marca de Apple Inc. Esta funda no está fabricada ni respaldada por Apple.</p>
+<footer data-sec="legal">
+  <div class="wrap">
+    <nav aria-label="Información legal">
+      <a href="legal/aviso-legal.html">Aviso legal</a>
+      <a href="legal/privacidad.html">Privacidad</a>
+      <a href="legal/condiciones.html">Condiciones</a>
+      <a href="legal/devoluciones.html">Devoluciones</a>
+      <button type="button" id="esCookieSettings">Configurar cookies</button>
+    </nav>
+    <p>Moul Pochetat · Matrix Tower LLC (Wyoming, EE. UU.) · <a href="mailto:moulpochetat@gmail.com">moulpochetat@gmail.com</a></p>
+    <p>iPhone es una marca de Apple Inc. Esta funda no está fabricada ni respaldada por Apple.</p>
+  </div>
 </footer>
 
 <div id="esSticky" aria-hidden="true">
-  <div><span class="p" data-price>69 €</span><small>Pagas al recibir</small></div>
-  <a class="cta" href="#pedido" tabindex="-1">Reservar la mía</a>
+  <div class="p"><b data-price>69,00 €</b><span>Pago a la entrega</span></div>
+  <a class="btn" href="#pedido" tabindex="-1">Pedir ahora</a>
 </div>
 
 <div id="esConsent" role="dialog" aria-live="polite" aria-label="Cookies">
-  <p>Usamos cookies y el píxel de Meta para medir esta página y mostrarte anuncios relevantes. Puedes aceptar o rechazar: la reserva funciona igual. <a id="esConsentMore" href="legal/privacidad.html#cookies">Más información</a></p>
-  <div class="btns">
-    <button type="button" id="esConsentReject">Rechazar</button>
-    <button type="button" id="esConsentAccept">Aceptar</button>
-  </div>
+  <p>Usamos cookies y el píxel de Meta para medir los anuncios. Tu pedido funciona igual si las rechazas. <a id="esConsentMore" href="legal/privacidad.html#cookies">Más información</a></p>
+  <div class="row"><button type="button" id="esConsentReject">Rechazar</button><button type="button" id="esConsentAccept">Aceptar</button></div>
 </div>
 
-<div id="esToast" role="alert" aria-live="assertive"></div>
+<div id="esToast" role="alert"></div>
 
 <dialog id="esModal" aria-labelledby="esModalT">
-  <div class="in-modal">
-    <div class="check"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" stroke="currentColor" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-    <h3 id="esModalT">Reserva recibida</h3>
-    <p id="esModalSub">No pagas nada ahora.</p>
-    <div class="ref"><span>Nº de reserva</span><span id="esModalRef"></span></div>
-    <ol>
-      <li>Te llamaremos para confirmar antes de enviarla.</li>
+  <div class="in-m">
+    <div class="chk"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
+    <h3 id="esModalT">Pedido recibido</h3>
+    <p id="esModalSub" style="margin:0;color:#555">No pagas nada ahora.</p>
+    <div class="ref">Nº de pedido <span id="esModalRef"></span></div>
+    <ul>
+      <li>Te llamaremos para confirmarlo antes de enviarlo.</li>
       <li>Envío previsto en 2-4 semanas, gratis.</li>
-      <li>Pagas <span data-price id="esModalTot">69 €</span> al repartidor al recibirla.</li>
-    </ol>
-    <p class="cancel-note">Si no podemos enviarla en ese plazo, cancelamos la reserva y te avisamos.</p>
-    <button type="button" class="cta" id="esModalClose">Entendido</button>
+      <li>Pagas <span id="esModalTot">69 €</span> al repartidor al recibirla.</li>
+      <li>Si no podemos enviarla en ese plazo, cancelamos la reserva y te avisamos.</li>
+    </ul>
+    <button type="button" class="btn" id="esModalClose">Entendido</button>
   </div>
 </dialog>
 
@@ -643,18 +370,17 @@ footer nav a{display:inline-flex;align-items:center;min-height:44px}
 (function () {
   'use strict';
   var CFG = window.ES_CFG, $ = function (s, r) { return (r || document).querySelector(s); }, $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
-  var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
   var eur = function (n) { return (Math.round(n * 100) / 100).toFixed(2).replace('.', ',') + ' €'; };
   var eurShort = function (n) { return (n % 1 ? n.toFixed(2).replace('.', ',') : String(n)) + ' €'; };
   var testKey = window.__esTestKey || '';
   var sticky = $('#esSticky'), banner = $('#esConsent'), heroOut = false, formIn = false;
   function updateSticky() { if (sticky && banner) sticky.classList.toggle('on', heroOut && !formIn && !banner.classList.contains('on')); }
 
-  /* ── Consentement + pixel (jamais avant « Aceptar », jamais le pixel boutique) */
+  /* ── Consentement + pixel (jamais avant « Aceptar ») */
   var consent = null; try { var c = JSON.parse(localStorage.getItem('nfcConsentV1') || 'null'); if (c && (c.v === 'accept' || c.v === 'reject')) consent = c.v; } catch (e) {}
-  var pixelOn = false, fired = {};
+  var pixelOn = false;
   function loadPixel() {
-    if (pixelOn || !/^\d{10,20}$/.test(CFG.PIXEL || '')) return;   /* PIXEL = dataset NFC ES uniquement (scripts/set-pixel.sh refuse le pixel boutique) */
+    if (pixelOn || !/^\d{10,20}$/.test(CFG.PIXEL || '')) return;
     pixelOn = true;
     !function (f, b, e, v, n, t, s) { if (f.fbq) return; n = f.fbq = function () { n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments); }; if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0'; n.queue = []; t = b.createElement(e); t.async = !0; t.src = v; s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s); }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', CFG.PIXEL);
@@ -679,92 +405,68 @@ footer nav a{display:inline-flex;align-items:center;min-height:44px}
   $('#esCookieSettings').addEventListener('click', function () { showBanner(true); $('#esConsentAccept').focus(); });
   if (consent === 'accept') grant(); else if (consent !== 'reject') showBanner(true);
 
-  /* ── Démo e-ink (signature) */
-  var stage = $('#esStage'), screenImg = $('[data-demo-screen]'), thumbs = $$('.thumb[data-img]'), order = thumbs.map(function (t) { return t.getAttribute('data-img'); });
-  var ALT = { trazo: 'un trazo de pincel negro, rojo y amarillo', flores: 'un ramo de flores rojas', retrato: 'el retrato de una mujer', libertad: 'la Estatua de la Libertad', anime: 'la ilustración de una chica' };
-  var cur = 0, timer = null, visible = false, T = [];
-  function clearT() { T.forEach(clearTimeout); T = []; }
-  /* chemins écrits en entier : scripts/deploy-shopify.mjs les réécrit en URL CDN Shopify */
-  var EINK = { trazo: 'assets/img/eink-trazo.webp', flores: 'assets/img/eink-flores.webp', retrato: 'assets/img/eink-retrato.webp', libertad: 'assets/img/eink-libertad.webp', anime: 'assets/img/eink-anime.webp' };
-  function swap(name) { screenImg.src = EINK[name]; screenImg.alt = 'Pantalla de tinta electrónica mostrando ' + ALT[name]; screenImg.setAttribute('data-current', name); }
-  function show(i) {
-    i = (i + order.length) % order.length;
-    if (i === cur) return;
-    clearT(); stage.classList.remove('refresh', 'near'); void stage.offsetWidth;   /* un nouveau clic interrompt l'animation en cours */
-    cur = i; var name = order[i];
-    thumbs.forEach(function (t, k) { t.setAttribute('aria-pressed', String(k === i)); });
-    if (reduce) { swap(name); return; }
-    stage.classList.add('near');
-    T.push(setTimeout(function () {
-      stage.classList.add('refresh');
-      T.push(setTimeout(function () { swap(name); }, 420));
-      T.push(setTimeout(function () { stage.classList.remove('refresh', 'near'); }, 950));
-    }, 450));
+  /* ── Galerie : défilement natif (swipe), points et vignettes synchronisés */
+  var slides = $('#esSlides'), figs = $$('figure', slides), dots = $$('#esDots i'), thumbs = $$('#esThumbs button'), cur = 0;
+  function mark(i) {
+    cur = i;
+    dots.forEach(function (d, k) { d.classList.toggle('on', k === i); });
+    thumbs.forEach(function (t, k) { t.setAttribute('aria-current', String(k === i)); });
   }
-  thumbs.forEach(function (t, k) { t.addEventListener('click', function () { stop(); show(k); }); });
-  $('[data-demo-next]').addEventListener('click', function () { stop(); show(cur + 1); });
-  function stop() { if (timer) { clearInterval(timer); timer = null; } }
-  function start() { if (reduce || timer) return; timer = setInterval(function () { if (visible && !document.hidden) show(cur + 1); }, 4500); }
-  if ('IntersectionObserver' in window) new IntersectionObserver(function (es) { visible = es[0].isIntersecting; }, { threshold: .4 }).observe(stage); else visible = true;
-  start();
-
-  /* Couleur de coque : démo ↔ formulaire synchronisés */
-  function setCase(v, fromForm) {
-    document.documentElement.style.setProperty('--case', 'var(--case-' + v + ')');
-    $$('.sw').forEach(function (b) { b.setAttribute('aria-pressed', String(b.getAttribute('data-case') === v)); });
-    if (!fromForm) { var r = $('input[name=color][value="' + v + '"]'); if (r) { r.checked = true; validate(); } }
-  }
-  $$('.sw').forEach(function (b) { b.addEventListener('click', function () { setCase(b.getAttribute('data-case')); }); });
+  function go(i) { slides.scrollTo({ left: figs[i].offsetLeft - slides.offsetLeft, behavior: 'smooth' }); mark(i); }
+  var gt = false;
+  slides.addEventListener('scroll', function () { if (gt) return; gt = true; requestAnimationFrame(function () { gt = false; var i = Math.round(slides.scrollLeft / Math.max(1, slides.clientWidth)); if (i !== cur && figs[i]) mark(i); }); }, { passive: true });
+  thumbs.forEach(function (t, k) { t.addEventListener('click', function () { go(k); }); });
 
   /* ── Formulaire */
   var PROV = { '01':'Araba/Álava','02':'Albacete','03':'Alicante','04':'Almería','05':'Ávila','06':'Badajoz','07':'Illes Balears','08':'Barcelona','09':'Burgos','10':'Cáceres','11':'Cádiz','12':'Castellón','13':'Ciudad Real','14':'Córdoba','15':'A Coruña','16':'Cuenca','17':'Girona','18':'Granada','19':'Guadalajara','20':'Gipuzkoa','21':'Huelva','22':'Huesca','23':'Jaén','24':'León','25':'Lleida','26':'La Rioja','27':'Lugo','28':'Madrid','29':'Málaga','30':'Murcia','31':'Navarra','32':'Ourense','33':'Asturias','34':'Palencia','35':'Las Palmas','36':'Pontevedra','37':'Salamanca','38':'Santa Cruz de Tenerife','39':'Cantabria','40':'Segovia','41':'Sevilla','42':'Soria','43':'Tarragona','44':'Teruel','45':'Toledo','46':'Valencia','47':'Valladolid','48':'Bizkaia','49':'Zamora','50':'Zaragoza','51':'Ceuta','52':'Melilla' };
   var EXCL = ['35', '38', '51', '52'];
-  var PHONE_RE = /^(?:\+34|0034|34)?(6\d{8}|7[1-9]\d{7})$/, CP_RE = /^(0[1-9]|[1-4]\d|5[0-2])\d{3}$/, MAIL_RE = /^[^\s@]{1,64}@[^\s@]{1,190}\.[a-z]{2,24}$/i;
-  var form = $('#esForm'), submit = $('#esSubmit'), touched = {};
-  var F = { name: $('#esName'), phone: $('#esPhone'), email: $('#esEmail'), address: $('#esAddr'), cp: $('#esCp'), city: $('#esCity'), model: $('#esModel'), quantity: $('#esQty'), terms: $('#esTerms') };
+  var PHONE_RE = /^(?:\+34|0034|34)?(6\d{8}|7[1-9]\d{7})$/, CP_RE = /^(0[1-9]|[1-4]\d|5[0-2])\d{3}$/;
+  var COLOR_LBL = { negro: 'Negro', gris: 'Gris', rosa: 'Rosa', naranja: 'Naranja' };
+  var form = $('#esForm'), submit = $('#esSubmit'), touched = {}, serverErr = {};
+  var F = { color: null, model: $('#esModel'), name: $('#esName'), phone: $('#esPhone'), address: $('#esAddr'), cp: $('#esCp'), city: $('#esCity') };
+  var ORDER = ['color', 'model', 'name', 'phone', 'address', 'cp', 'city'];
   function val(k) { return (F[k].value || '').trim(); }
+  function color() { return ($('input[name=color]:checked') || {}).value || ''; }
   function rules() {
     var e = {}, n = val('name').replace(/\s+/g, ' ');
+    if (!color()) e.color = 'Elige un color';
+    if (!val('model')) e.model = 'Elige el modelo de tu iPhone';
     if (n.length < 3 || n.indexOf(' ') < 0) e.name = 'Escribe tu nombre y apellido';
     if (!PHONE_RE.test(val('phone').replace(/[\s.\-()]/g, ''))) e.phone = 'Escribe un móvil español válido (6XX XXX XXX)';
-    if (val('email') && !MAIL_RE.test(val('email'))) e.email = 'El correo no es válido';
     if (val('address').length < 8) e.address = 'Escribe la dirección completa (calle, número, piso)';
     var cp = val('cp');
     if (!CP_RE.test(cp)) e.cp = 'El código postal no es válido';
     else if (EXCL.indexOf(cp.slice(0, 2)) >= 0) e.cp = 'Por ahora no enviamos a Canarias, Ceuta ni Melilla';
     if (val('city').length < 2) e.city = 'Escribe tu localidad';
-    if (!val('model')) e.model = 'Elige el modelo de tu iPhone';
-    if (!$('input[name=color]:checked')) e.color = 'Elige un color';
-    if (!F.terms.checked) e.consent_terms = 'Acepta las condiciones para confirmar el pedido';
     return e;
   }
-  var serverErr = {};
   function paint(errs, all) {
-    Object.keys({ name: 1, phone: 1, email: 1, address: 1, cp: 1, city: 1, model: 1, color: 1, consent_terms: 1 }).forEach(function (k) {
-      var show = all || touched[k], msg = (show ? (errs[k] || '') : '') || serverErr[k] || '';
+    ORDER.forEach(function (k) {
+      var msg = ((all || touched[k]) ? (errs[k] || '') : '') || serverErr[k] || '';
       var box = $('.es-err[data-for="' + k + '"]'); if (box) box.textContent = msg;
-      var input = k === 'consent_terms' ? F.terms : (k === 'color' ? null : F[k]);
+      var input = F[k];
       if (input) { if (msg) input.setAttribute('aria-invalid', 'true'); else input.removeAttribute('aria-invalid'); }
     });
   }
-  function totals() {
-    var q = parseInt(F.quantity.value, 10) || 1;
-    $('#esQtyLbl').textContent = q; $('#esTotal').textContent = eur(CFG.PRICE * q);
-    $('#esLine').textContent = eurShort(CFG.PRICE * q); $('#esModalTot').textContent = eurShort(CFG.PRICE * q);
+  function summary() {
+    var m = F.model.value;
+    $('#esSel').textContent = '· ' + (COLOR_LBL[color()] || '') + (m ? ' · iPhone ' + m : '');
+    $('#esTotal').textContent = eur(CFG.PRICE); $('#esLine').textContent = eur(CFG.PRICE); $('#esModalTot').textContent = eurShort(CFG.PRICE);
+    $$('.colors label').forEach(function (l) { l.classList.toggle('on', !!$('input', l).checked); });
   }
-  function validate() {
-    var cp = val('cp'); F.cp.value = cp.replace(/\D/g, '').slice(0, 5);
+  function validate(all) {
+    F.cp.value = val('cp').replace(/\D/g, '').slice(0, 5);
     $('#esProv').value = CP_RE.test(F.cp.value) ? PROV[F.cp.value.slice(0, 2)] : '';
-    var errs = rules(); paint(errs, false); totals();
-    submit.disabled = Object.keys(errs).length > 0;
+    var errs = rules(); paint(errs, all); summary();
     return errs;
   }
-  Object.keys(F).forEach(function (k) {
-    var el = F[k], key = k === 'terms' ? 'consent_terms' : k;
-    el.addEventListener('input', function () { delete serverErr[key]; validate(); }); el.addEventListener('change', function () { delete serverErr[key]; touched[key] = true; validate(); });
-    el.addEventListener('blur', function () { if (el.value || k === 'terms') { touched[key] = true; validate(); } });
+  ['model', 'name', 'phone', 'address', 'cp', 'city'].forEach(function (k) {
+    var el = F[k];
+    el.addEventListener('input', function () { delete serverErr[k]; validate(); });
+    el.addEventListener('change', function () { delete serverErr[k]; touched[k] = true; validate(); });
+    el.addEventListener('blur', function () { if (el.value) { touched[k] = true; validate(); } });
   });
-  $$('input[name=color]').forEach(function (r) { r.addEventListener('change', function () { setCase(r.value, true); validate(); }); });
+  $$('input[name=color]').forEach(function (r) { r.addEventListener('change', function () { delete serverErr.color; validate(); }); });
   var atc = false, ic = false;
   F.model.addEventListener('change', function () { if (!atc && F.model.value) { atc = true; track('AddToCart', { content_name: 'nfc-case-es', value: CFG.PRICE, currency: CFG.CURRENCY }); } });
   form.addEventListener('focusin', function () { if (!ic) { ic = true; track('InitiateCheckout', { value: CFG.PRICE, currency: CFG.CURRENCY }); } });
@@ -774,26 +476,33 @@ footer nav a{display:inline-flex;align-items:center;min-height:44px}
   var modal = $('#esModal');
   function openModal(ref, dup) {
     $('#esModalRef').textContent = ref || '';
-    $('#esModalT').textContent = dup ? 'Ya tenemos tu reserva' : 'Reserva recibida';
-    $('#esModalSub').textContent = dup ? 'Ya registramos una reserva con este móvil hoy. No hace falta repetirla.' : 'No pagas nada ahora.';
+    $('#esModalT').textContent = dup ? 'Ya tenemos tu pedido' : 'Pedido recibido';
+    $('#esModalSub').textContent = dup ? 'Ya registramos un pedido con este móvil hoy. No hace falta repetirlo.' : 'No pagas nada ahora.';
     if (modal.showModal) { try { modal.showModal(); } catch (e) { modal.setAttribute('open', ''); } } else modal.setAttribute('open', '');
     modal.classList.add('is-open');
   }
   $('#esModalClose').addEventListener('click', function () { modal.classList.remove('is-open'); if (modal.close) modal.close(); else modal.removeAttribute('open'); });
   modal.addEventListener('close', function () { modal.classList.remove('is-open'); });
 
-  var sending = false;
+  var sending = false, done = {};
   form.addEventListener('submit', function (ev) {
     ev.preventDefault();
-    var errs = validate();
-    if (Object.keys(errs).length) { paint(errs, true); var first = Object.keys(errs)[0]; var el = first === 'consent_terms' ? F.terms : (F[first] || null); if (el) el.focus(); return; }
     if (sending) return;
-    if ($('#esHp').value) { toast('No hemos podido enviar la reserva. Inténtalo de nuevo.'); return; }
+    var errs = validate(true);
+    if (Object.keys(errs).length) {
+      var first = ORDER.filter(function (k) { return errs[k]; })[0];
+      var el = first === 'color' ? $('input[name=color]') : F[first];
+      var box = $('.es-err[data-for="' + first + '"]');
+      (box && box.parentNode ? box.parentNode : el).scrollIntoView({ block: 'center', behavior: 'smooth' });
+      if (el && first !== 'color') setTimeout(function () { el.focus({ preventScroll: true }); }, 350);
+      return;
+    }
+    if ($('#esHp').value) { toast('No hemos podido enviar el pedido. Inténtalo de nuevo.'); return; }
     sending = true; submit.setAttribute('aria-busy', 'true'); submit.disabled = true; var label = submit.textContent; submit.textContent = 'Enviando…';
-    var A = window.__esAttr || {}, q = parseInt(F.quantity.value, 10) || 1;
+    var A = window.__esAttr || {};
     var body = {
-      name: val('name').replace(/\s+/g, ' '), phone: val('phone'), email: val('email'), address: val('address'), cp: val('cp'), city: val('city'),
-      model: F.model.value, color: ($('input[name=color]:checked') || {}).value, quantity: q,
+      name: val('name').replace(/\s+/g, ' '), phone: val('phone'), email: '', address: val('address'), cp: val('cp'), city: val('city'),
+      model: F.model.value, color: color(), quantity: 1,
       consent_terms: true, consent_ads: consent === 'accept', click_id: window.__esClick,
       url: A.landing_url || location.href, utm: A.utm || {}, fbclid: A.fbclid || '',
       fbp: consent === 'accept' ? cookie('_fbp') : '', fbc: consent === 'accept' ? cookie('_fbc') : '', hp: $('#esHp').value
@@ -805,34 +514,31 @@ footer nav a{display:inline-flex;align-items:center;min-height:44px}
         var s = res.s, j = res.j || {};
         if (s === 200 && j.success) {
           openModal(j.order_ref, false);
-          track('Purchase', { value: Math.round(CFG.CAPI_VALUE * q * 100) / 100, currency: CFG.CURRENCY, content_type: 'product', content_name: 'nfc-case-es', num_items: q }, { eventID: 'es_' + j.lead_id });
+          if (!done[j.lead_id]) { done[j.lead_id] = 1; track('Purchase', { value: Math.round(CFG.CAPI_VALUE * 100) / 100, currency: CFG.CURRENCY, content_type: 'product', content_name: 'nfc-case-es', num_items: 1 }, { eventID: 'es_' + j.lead_id }); }
         } else if (s === 409) {
           openModal(j.order_ref, true);
         } else {
-          toast(j.error || 'No hemos podido enviar la reserva. Inténtalo de nuevo.');
-          if (j.field) {
+          toast(j.error || 'No hemos podido enviar el pedido. Inténtalo de nuevo.');
+          if (j.field && F.hasOwnProperty(j.field)) {
             serverErr[j.field] = j.error || 'Revisa este campo';
-            var fld = j.field === 'consent_terms' ? F.terms : F[j.field];
-            var box = $('.es-err[data-for="' + j.field + '"]'); if (box) box.textContent = j.error || '';
-            if (fld) { fld.setAttribute('aria-invalid', 'true'); fld.focus(); }
+            paint(rules(), false);
+            var fld = F[j.field]; if (fld) fld.focus();
           }
         }
       })
       .catch(function () { toast('Sin conexión. Comprueba tu red e inténtalo de nuevo.'); })
-      .then(function () { sending = false; submit.removeAttribute('aria-busy'); submit.textContent = label; validate(); });
+      .then(function () { sending = false; submit.removeAttribute('aria-busy'); submit.disabled = false; submit.textContent = label; });
   });
   validate();
 
-  /* ── Prix : le serveur fait foi (congruence pub ↔ page ↔ serveur) */
+  /* ── Prix : le serveur fait foi */
   fetch(CFG.FN + '/nfc-es-order?config=1').then(function (r) { return r.json(); }).then(function (c) {
     if (c && typeof c.price_eur === 'number' && c.price_eur !== CFG.PRICE) {
-      CFG.PRICE = c.price_eur; $$('[data-price]').forEach(function (el) { if (!el.id) el.textContent = eurShort(c.price_eur); }); totals();
+      CFG.PRICE = c.price_eur; $$('[data-price]').forEach(function (el) { el.textContent = eur(c.price_eur); }); summary();
     }
   }).catch(function () {});
 
-  /* ── Barre collante : après le hero, masquée sur le formulaire et sous le bandeau cookies */
-
-  /* Position recalculée au défilement (1×/frame) : un IntersectionObserver rate le cas où le défilement saute par-dessus le CTA. */
+  /* ── Barre collante : après le bouton du haut, masquée sur le formulaire et sous le bandeau cookies */
   var heroCta = $('#esHeroCta'), pedido = $('#pedido'), ticking = false;
   function measure() { ticking = false; heroOut = heroCta.getBoundingClientRect().bottom < 0; var r = pedido.getBoundingClientRect(); formIn = r.top < innerHeight * .9 && r.bottom > 0; updateSticky(); }
   addEventListener('scroll', function () { if (!ticking) { ticking = true; requestAnimationFrame(measure); } }, { passive: true });
