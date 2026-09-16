@@ -3,6 +3,23 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<script>
+window.ES_CFG={FN:'https://strocqxfyfohwbdntmsu.supabase.co/functions/v1',PIXEL:'',STORE_PIXEL:'619283237929783',PRICE:69,CURRENCY:'EUR',CAPI_VALUE:9.70,DELIVERY_NOTE:'Reserva sin pago · Envío previsto en 2-4 semanas'};
+(function(){try{var C=window.ES_CFG,S={},u={},cid;
+window.__esBeacon=function(c,x){var p={click_id:cid,event_id:window.__esEid,url:S.landing_url||location.href,ref:document.referrer||'',fbclid:S.fbclid||'',ad_id:u.utm_content||'',adset_id:u.utm_term||'',utm:u,consent:!!c},b,U=C.FN+'/nfc-es-pageview';if(window.__esTestKey)p.test=true;if(x)for(var k in x)p[k]=x[k];b=JSON.stringify(p);if(!(navigator.sendBeacon&&navigator.sendBeacon(U,b)))fetch(U,{method:'POST',body:b,keepalive:true,headers:{'Content-Type':'text/plain'}}).catch(function(){})};
+var q=new URLSearchParams(location.search);
+/* clé de test : lue puis retirée de l'URL (jamais en base ni chez Meta) */
+if(q.get('nfc_test')){window.__esTestKey=q.get('nfc_test');q.delete('nfc_test');try{history.replaceState(null,'',location.pathname+(q.toString()?'?'+q.toString():'')+location.hash)}catch(e){}}
+/* attribution : en mémoire + beacon ; sessionStorage seulement après « Aceptar » (LSSI 22.2) */
+var ok=false;try{ok=(JSON.parse(localStorage.getItem('nfcConsentV1')||'null')||{}).v==='accept'}catch(e){}
+if(ok){try{S=JSON.parse(sessionStorage.getItem('nfcUtmV1')||'{}')||{}}catch(e){S={}}}
+var fresh=false,t={};['utm_source','utm_medium','utm_campaign','utm_content','utm_term','utm_id'].forEach(function(k){if(q.get(k)){t[k]=q.get(k);fresh=true}});
+if(q.get('fbclid'))fresh=true;if(fresh)S={utm:t,fbclid:q.get('fbclid')||'',landing_url:location.href};u=S.utm||{};
+window.__esPersistAttr=function(){try{if(S.landing_url||S.fbclid)sessionStorage.setItem('nfcUtmV1',JSON.stringify(S))}catch(e){}};if(ok)window.__esPersistAttr();
+var a=new Uint8Array(8),r='';(window.crypto&&crypto.getRandomValues)?crypto.getRandomValues(a):a.forEach(function(_,i){a[i]=Math.random()*256});a.forEach(function(x){r+=('0'+x.toString(36)).slice(-2)});
+cid='es_'+Date.now().toString(36)+r.replace(/[^a-z0-9]/g,'');window.__esClick=cid;window.__esEid='lpv_'+cid;window.__esAttr=S;
+window.__esBeacon(false)}catch(e){}})();
+</script>
 <title>NFC Case · La funda con pantalla de tinta electrónica · Pagas al recibir</title>
 <meta name="description" content="Funda para iPhone con pantalla de tinta electrónica: eliges la imagen en tu iPhone y la funda la muestra, sin batería. 69 € IVA incluido, envío gratis, pagas al recibir.">
 <meta name="robots" content="noindex,nofollow">
@@ -15,42 +32,7 @@
              l'iPhone s'approche, la tinta electrónica fait son rafraîchissement noir/blanc et affiche l'écran RÉEL découpé des photos produit.
   Contrat DOM : docs/DOM_CONTRACT.md · Serveur : nfc-es-order / nfc-es-pageview (projet strocqxfyfohwbdntmsu)
 -->
-<script>
-window.ES_CFG = {
-  FN: 'https://strocqxfyfohwbdntmsu.supabase.co/functions/v1',
-  PIXEL: '',                        /* dataset « NFC ES » — vide tant qu'il n'est pas créé : aucun script Meta n'est alors chargé */
-  STORE_PIXEL: '619283237929783',   /* pixel de la boutique Maroc : JAMAIS sur cette page */
-  PRICE: 69, CURRENCY: 'EUR', CAPI_VALUE: 9.70,
-  DELIVERY_NOTE: 'Reserva sin pago · Envío previsto en 2-4 semanas'
-};
-(function () {
-  /* Beacon dans le premier Ko, AVANT tout consentement : aucun cookie lu, aucun appel à Meta. */
-  try {
-    var q = new URLSearchParams(location.search), S = {};
-    try { S = JSON.parse(sessionStorage.getItem('nfcUtmV1') || '{}') || {}; } catch (e) { S = {}; }
-    var keys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'utm_id'], utm = {}, fresh = false;
-    keys.forEach(function (k) { if (q.get(k)) { utm[k] = q.get(k); fresh = true; } });
-    if (q.get('fbclid')) fresh = true;
-    if (fresh) { S = { utm: utm, fbclid: q.get('fbclid') || S.fbclid || '', landing_url: location.href }; try { sessionStorage.setItem('nfcUtmV1', JSON.stringify(S)); } catch (e) {} }
-    if (q.get('nfc_test')) { try { sessionStorage.setItem('nfcTestKey', q.get('nfc_test')); } catch (e) {} }
-    var rnd = ''; var a = new Uint8Array(8); (window.crypto || {}).getRandomValues ? crypto.getRandomValues(a) : a.forEach(function (_, i) { a[i] = Math.random() * 256; });
-    a.forEach(function (x) { rnd += ('0' + x.toString(36)).slice(-2); });
-    var cid = 'es_' + Date.now().toString(36) + rnd.replace(/[^a-z0-9]/g, '');
-    window.__esClick = cid; window.__esEid = 'lpv_' + cid; window.__esAttr = S;
-    var u = S.utm || {};
-    window.__esBeacon = function (consent, extra) {
-      var p = { click_id: cid, event_id: window.__esEid, url: S.landing_url || location.href, ref: document.referrer || '',
-        fbclid: S.fbclid || '', ad_id: u.utm_content || '', adset_id: u.utm_term || '', utm: u, consent: !!consent };
-      if (extra) for (var k in extra) p[k] = extra[k];
-      var body = JSON.stringify(p), url = window.ES_CFG.FN + '/nfc-es-pageview';
-      if (!(navigator.sendBeacon && navigator.sendBeacon(url, body))) {
-        fetch(url, { method: 'POST', body: body, keepalive: true, headers: { 'Content-Type': 'text/plain' } }).catch(function () {});
-      }
-    };
-    window.__esBeacon(false);
-  } catch (e) {}
-})();
-</script>
+
 <link rel="preload" href="assets/fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/geist.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" as="image" href="assets/img/eink-trazo.webp" fetchpriority="high">
@@ -649,7 +631,7 @@ footer nav a{display:inline-flex;align-items:center;min-height:44px}
   var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
   var eur = function (n) { return (Math.round(n * 100) / 100).toFixed(2).replace('.', ',') + ' €'; };
   var eurShort = function (n) { return (n % 1 ? n.toFixed(2).replace('.', ',') : String(n)) + ' €'; };
-  var testKey = ''; try { testKey = sessionStorage.getItem('nfcTestKey') || ''; } catch (e) {}
+  var testKey = window.__esTestKey || '';
   var sticky = $('#esSticky'), banner = $('#esConsent'), heroOut = false, formIn = false;
   function updateSticky() { if (sticky && banner) sticky.classList.toggle('on', heroOut && !formIn && !banner.classList.contains('on')); }
 
@@ -667,6 +649,7 @@ footer nav a{display:inline-flex;align-items:center;min-height:44px}
   function track(ev, data, opts) { if (consent !== 'accept' || !pixelOn || typeof window.fbq !== 'function') return; try { opts ? fbq('track', ev, data || {}, opts) : fbq('track', ev, data || {}); } catch (e) {} }
   function cookie(n) { var m = document.cookie.match(new RegExp('(?:^|;\\s*)' + n + '=([^;]+)')); return m ? decodeURIComponent(m[1]) : ''; }
   function grant() {
+    if (window.__esPersistAttr) window.__esPersistAttr();
     loadPixel();
     setTimeout(function () { window.__esBeacon && window.__esBeacon(true, { fbp: cookie('_fbp'), fbc: cookie('_fbc') }); }, pixelOn ? 1200 : 0);
   }
@@ -684,19 +667,22 @@ footer nav a{display:inline-flex;align-items:center;min-height:44px}
   /* ── Démo e-ink (signature) */
   var stage = $('#esStage'), screenImg = $('[data-demo-screen]'), thumbs = $$('.thumb[data-img]'), order = thumbs.map(function (t) { return t.getAttribute('data-img'); });
   var ALT = { trazo: 'un trazo de pincel negro, rojo y amarillo', flores: 'un ramo de flores rojas', retrato: 'el retrato de una mujer', libertad: 'la Estatua de la Libertad', anime: 'la ilustración de una chica' };
-  var cur = 0, busy = false, timer = null, visible = false;
+  var cur = 0, timer = null, visible = false, T = [];
+  function clearT() { T.forEach(clearTimeout); T = []; }
+  function swap(name) { screenImg.src = 'assets/img/eink-' + name + '.webp'; screenImg.alt = 'Pantalla de tinta electrónica mostrando ' + ALT[name]; screenImg.setAttribute('data-current', name); }
   function show(i) {
-    if (busy) return; i = (i + order.length) % order.length; if (i === cur && !stage.classList.contains('refresh')) { if (i === cur) return; }
-    busy = true; cur = i;
+    i = (i + order.length) % order.length;
+    if (i === cur) return;
+    clearT(); stage.classList.remove('refresh', 'near'); void stage.offsetWidth;   /* un nouveau clic interrompt l'animation en cours */
+    cur = i; var name = order[i];
     thumbs.forEach(function (t, k) { t.setAttribute('aria-pressed', String(k === i)); });
-    var name = order[i];
-    if (reduce) { screenImg.src = 'assets/img/eink-' + name + '.webp'; screenImg.alt = 'Pantalla de tinta electrónica mostrando ' + ALT[name]; busy = false; return; }
+    if (reduce) { swap(name); return; }
     stage.classList.add('near');
-    setTimeout(function () {
+    T.push(setTimeout(function () {
       stage.classList.add('refresh');
-      setTimeout(function () { screenImg.src = 'assets/img/eink-' + name + '.webp'; screenImg.alt = 'Pantalla de tinta electrónica mostrando ' + ALT[name]; }, 420);
-      setTimeout(function () { stage.classList.remove('refresh', 'near'); busy = false; }, 950);
-    }, 820);
+      T.push(setTimeout(function () { swap(name); }, 420));
+      T.push(setTimeout(function () { stage.classList.remove('refresh', 'near'); }, 950));
+    }, 450));
   }
   thumbs.forEach(function (t, k) { t.addEventListener('click', function () { stop(); show(k); }); });
   $('[data-demo-next]').addEventListener('click', function () { stop(); show(cur + 1); });
@@ -735,9 +721,10 @@ footer nav a{display:inline-flex;align-items:center;min-height:44px}
     if (!F.terms.checked) e.consent_terms = 'Acepta las condiciones para confirmar el pedido';
     return e;
   }
+  var serverErr = {};
   function paint(errs, all) {
     Object.keys({ name: 1, phone: 1, email: 1, address: 1, cp: 1, city: 1, model: 1, color: 1, consent_terms: 1 }).forEach(function (k) {
-      var show = all || touched[k], msg = show ? (errs[k] || '') : '';
+      var show = all || touched[k], msg = (show ? (errs[k] || '') : '') || serverErr[k] || '';
       var box = $('.es-err[data-for="' + k + '"]'); if (box) box.textContent = msg;
       var input = k === 'consent_terms' ? F.terms : (k === 'color' ? null : F[k]);
       if (input) { if (msg) input.setAttribute('aria-invalid', 'true'); else input.removeAttribute('aria-invalid'); }
@@ -757,7 +744,7 @@ footer nav a{display:inline-flex;align-items:center;min-height:44px}
   }
   Object.keys(F).forEach(function (k) {
     var el = F[k], key = k === 'terms' ? 'consent_terms' : k;
-    el.addEventListener('input', validate); el.addEventListener('change', function () { touched[key] = true; validate(); });
+    el.addEventListener('input', function () { delete serverErr[key]; validate(); }); el.addEventListener('change', function () { delete serverErr[key]; touched[key] = true; validate(); });
     el.addEventListener('blur', function () { if (el.value || k === 'terms') { touched[key] = true; validate(); } });
   });
   $$('input[name=color]').forEach(function (r) { r.addEventListener('change', function () { setCase(r.value, true); validate(); }); });
@@ -807,6 +794,7 @@ footer nav a{display:inline-flex;align-items:center;min-height:44px}
         } else {
           toast(j.error || 'No hemos podido enviar la reserva. Inténtalo de nuevo.');
           if (j.field) {
+            serverErr[j.field] = j.error || 'Revisa este campo';
             var fld = j.field === 'consent_terms' ? F.terms : F[j.field];
             var box = $('.es-err[data-for="' + j.field + '"]'); if (box) box.textContent = j.error || '';
             if (fld) { fld.setAttribute('aria-invalid', 'true'); fld.focus(); }
@@ -827,10 +815,12 @@ footer nav a{display:inline-flex;align-items:center;min-height:44px}
 
   /* ── Barre collante : après le hero, masquée sur le formulaire et sous le bandeau cookies */
 
-  if ('IntersectionObserver' in window) {
-    new IntersectionObserver(function (es) { heroOut = !es[0].isIntersecting && es[0].boundingClientRect.top < 0; updateSticky(); }).observe($('#esHeroCta'));
-    new IntersectionObserver(function (es) { formIn = es[0].isIntersecting; updateSticky(); }, { threshold: .05 }).observe($('#pedido'));
-  }
+  /* Position recalculée au défilement (1×/frame) : un IntersectionObserver rate le cas où le défilement saute par-dessus le CTA. */
+  var heroCta = $('#esHeroCta'), pedido = $('#pedido'), ticking = false;
+  function measure() { ticking = false; heroOut = heroCta.getBoundingClientRect().bottom < 0; var r = pedido.getBoundingClientRect(); formIn = r.top < innerHeight * .9 && r.bottom > 0; updateSticky(); }
+  addEventListener('scroll', function () { if (!ticking) { ticking = true; requestAnimationFrame(measure); } }, { passive: true });
+  addEventListener('resize', measure, { passive: true });
+  measure();
 })();
 </script>
 </body>
