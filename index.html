@@ -48,16 +48,16 @@ button,input,select{font:inherit;color:inherit}
 header.top{border-bottom:1px solid var(--line)}
 header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:52px}
 .logo{font-weight:800;font-size:18px;letter-spacing:-.02em;text-decoration:none}
-.top a.go{font-size:14px;font-weight:600;text-decoration:none;padding:8px 0}
+.top a.go{font-size:14px;font-weight:600;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;min-height:44px;min-width:44px;padding:0 8px;margin-right:-8px}
 
 /* Produit */
-.product{display:grid;gap:18px;padding-top:12px;padding-bottom:28px}
+.product{display:grid;gap:14px;padding-top:4px;padding-bottom:28px}
 .gal{position:relative;margin:0 -16px}
 .slides{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-webkit-overflow-scrolling:touch}
 .slides::-webkit-scrollbar{display:none}
 .slides figure{flex:0 0 100%;margin:0;scroll-snap-align:center;aspect-ratio:1/1;background:#fff}
 .slides img{width:100%;height:100%;object-fit:contain}
-.dots{display:flex;justify-content:center;gap:6px;margin-top:8px}
+.dots{display:flex;justify-content:center;gap:6px;margin-top:4px}
 .dots i{width:6px;height:6px;border-radius:50%;background:#cfcfcf;transition:background .2s}
 .dots i.on{background:var(--ink)}
 .thumbs{display:none}
@@ -241,7 +241,7 @@ footer p{margin:4px 0}
 <section class="sec" data-sec="faq" aria-labelledby="t-faq">
   <div class="wrap narrow">
     <h2 id="t-faq">Preguntas frecuentes</h2>
-    <details><summary>¿Tengo que pagar algo ahora?</summary><p>No. Pagas 69 € en efectivo al repartidor cuando recibes la funda. Sin recargo por pago a la entrega.</p></details>
+    <details><summary>¿Tengo que pagar algo ahora?</summary><p>No. Pagas <span data-price>69,00 €</span> en efectivo al repartidor cuando recibes la funda. Sin recargo por pago a la entrega.</p></details>
     <details><summary>¿Cuándo me llega?</summary><p>El envío está previsto en 2-4 semanas y te llamamos antes de enviarla. Si no podemos enviarla en ese plazo, cancelamos la reserva y te avisamos. Por ahora no enviamos a Canarias, Ceuta ni Melilla.</p></details>
     <details><summary>¿Es compatible con mi iPhone?</summary><p>Hay versión para iPhone 13/14, 14 Pro, 14 Pro Max, 15, 15 Pro, 16, 16 Plus, 16 Pro, 16 Pro Max, 17, 17 Pro y 17 Pro Max.</p></details>
     <details><summary>¿Hay que cargarla?</summary><p>No. La energía para cambiar la imagen la da tu iPhone al acercarlo, y la imagen se queda aunque el móvil esté apagado.</p></details>
@@ -359,7 +359,7 @@ footer p{margin:4px 0}
     <ul>
       <li>Te llamaremos para confirmarlo antes de enviarlo.</li>
       <li>Envío previsto en 2-4 semanas, gratis.</li>
-      <li>Pagas <span id="esModalTot">69 €</span> al repartidor al recibirla.</li>
+      <li>Pagas <span id="esModalTot">69,00 €</span> al repartidor al recibirla.</li>
       <li>Si no podemos enviarla en ese plazo, cancelamos la reserva y te avisamos.</li>
     </ul>
     <button type="button" class="btn" id="esModalClose">Entendido</button>
@@ -371,7 +371,6 @@ footer p{margin:4px 0}
   'use strict';
   var CFG = window.ES_CFG, $ = function (s, r) { return (r || document).querySelector(s); }, $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
   var eur = function (n) { return (Math.round(n * 100) / 100).toFixed(2).replace('.', ',') + ' €'; };
-  var eurShort = function (n) { return (n % 1 ? n.toFixed(2).replace('.', ',') : String(n)) + ' €'; };
   var testKey = window.__esTestKey || '';
   var sticky = $('#esSticky'), banner = $('#esConsent'), heroOut = false, formIn = false;
   function updateSticky() { if (sticky && banner) sticky.classList.toggle('on', heroOut && !formIn && !banner.classList.contains('on')); }
@@ -451,7 +450,7 @@ footer p{margin:4px 0}
   function summary() {
     var m = F.model.value;
     $('#esSel').textContent = '· ' + (COLOR_LBL[color()] || '') + (m ? ' · iPhone ' + m : '');
-    $('#esTotal').textContent = eur(CFG.PRICE); $('#esLine').textContent = eur(CFG.PRICE); $('#esModalTot').textContent = eurShort(CFG.PRICE);
+    $('#esTotal').textContent = eur(CFG.PRICE); $('#esLine').textContent = eur(CFG.PRICE); $('#esModalTot').textContent = eur(CFG.PRICE);
     $$('.colors label').forEach(function (l) { l.classList.toggle('on', !!$('input', l).checked); });
   }
   function validate(all) {
@@ -513,6 +512,7 @@ footer p{margin:4px 0}
       .then(function (res) {
         var s = res.s, j = res.j || {};
         if (s === 200 && j.success) {
+          if (typeof j.total_eur === 'number' || /^\d+(\.\d+)?$/.test(String(j.total_eur || ''))) $('#esModalTot').textContent = eur(Number(j.total_eur));   /* montant du serveur */
           openModal(j.order_ref, false);
           if (!done[j.lead_id]) { done[j.lead_id] = 1; track('Purchase', { value: Math.round(CFG.CAPI_VALUE * 100) / 100, currency: CFG.CURRENCY, content_type: 'product', content_name: 'nfc-case-es', num_items: 1 }, { eventID: 'es_' + j.lead_id }); }
         } else if (s === 409) {
