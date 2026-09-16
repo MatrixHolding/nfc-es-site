@@ -684,7 +684,9 @@ footer nav a{display:inline-flex;align-items:center;min-height:44px}
   var ALT = { trazo: 'un trazo de pincel negro, rojo y amarillo', flores: 'un ramo de flores rojas', retrato: 'el retrato de una mujer', libertad: 'la Estatua de la Libertad', anime: 'la ilustración de una chica' };
   var cur = 0, timer = null, visible = false, T = [];
   function clearT() { T.forEach(clearTimeout); T = []; }
-  function swap(name) { screenImg.src = 'assets/img/eink-' + name + '.webp'; screenImg.alt = 'Pantalla de tinta electrónica mostrando ' + ALT[name]; screenImg.setAttribute('data-current', name); }
+  /* chemins écrits en entier : scripts/deploy-shopify.mjs les réécrit en URL CDN Shopify */
+  var EINK = { trazo: 'assets/img/eink-trazo.webp', flores: 'assets/img/eink-flores.webp', retrato: 'assets/img/eink-retrato.webp', libertad: 'assets/img/eink-libertad.webp', anime: 'assets/img/eink-anime.webp' };
+  function swap(name) { screenImg.src = EINK[name]; screenImg.alt = 'Pantalla de tinta electrónica mostrando ' + ALT[name]; screenImg.setAttribute('data-current', name); }
   function show(i) {
     i = (i + order.length) % order.length;
     if (i === cur) return;
