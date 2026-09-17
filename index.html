@@ -354,10 +354,10 @@ footer p{margin:4px 0}
   <div class="in-m">
     <div class="chk"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
     <h3 id="esModalT">Pedido recibido</h3>
-    <p id="esModalSub" style="margin:0;color:#555">No pagas nada ahora.</p>
+    <p id="esModalSub" style="margin:6px 0 0;color:#111;font-size:16px;font-weight:600">Nuestro equipo te contactará para confirmar tu pedido.</p>
     <div class="ref">Nº de pedido <span id="esModalRef"></span></div>
     <ul>
-      <li>Te llamaremos para confirmarlo antes de enviarlo.</li>
+      <li>No pagas nada ahora.</li>
       <li>Envío previsto en 2-4 semanas, gratis.</li>
       <li>Pagas <span id="esModalTot">69,00 €</span> al repartidor al recibirla.</li>
       <li>Si no podemos enviarla en ese plazo, cancelamos la reserva y te avisamos.</li>
@@ -476,7 +476,7 @@ footer p{margin:4px 0}
   function openModal(ref, dup) {
     $('#esModalRef').textContent = ref || '';
     $('#esModalT').textContent = dup ? 'Ya tenemos tu pedido' : 'Pedido recibido';
-    $('#esModalSub').textContent = dup ? 'Ya registramos un pedido con este móvil hoy. No hace falta repetirlo.' : 'No pagas nada ahora.';
+    $('#esModalSub').textContent = dup ? 'Ya registramos un pedido con este móvil hoy. Nuestro equipo te contactará para confirmarlo.' : 'Nuestro equipo te contactará para confirmar tu pedido.';
     if (modal.showModal) { try { modal.showModal(); } catch (e) { modal.setAttribute('open', ''); } } else modal.setAttribute('open', '');
     modal.classList.add('is-open');
   }
